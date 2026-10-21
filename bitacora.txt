@@ -1,0 +1,14 @@
+1.Localizar url completa
+
+URL completa: http://127.0.0.1:5500/index.html
+
+protocolo: http
+host:: 127.0.0.1
+puerto: 5500
+ruta: /index.html
+Metodo: GET
+status: 304 Not Modified
+
+Ruta no existente :
+
+Status: Status 404 Not Found
