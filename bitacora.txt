@@ -9,6 +9,8 @@ ruta: /index.html
 Metodo: GET
 status: 304 Not Modified
 
-Ruta no existente :
+Ruta no existente:
+Status: Status 404 Not Found
 
+Escribe una ruta que no exista:
 Status: Status 404 Not Found
