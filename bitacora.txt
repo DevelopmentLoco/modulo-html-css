@@ -5,7 +5,7 @@ URL completa: http://127.0.0.1:5500/index.html
 protocolo: http
 host:: 127.0.0.1
 puerto: 5500
-ruta: /index.html
+ruta: 127.0.0.1/index.html
 Metodo: GET
 status: 304 Not Modified
 
@@ -14,3 +14,25 @@ Status: Status 404 Not Found
 
 Escribe una ruta que no exista:
 Status: Status 404 Not Found
+
+2.Registrar rutas relativas del proyecto:
+
+archivo de origen --> destino --> ruta escrita
+
+    1.Inicio (index.html)
+        index.html -->  Inicio --> index.html
+        index.html -->  Tarifas --> ./pages/tarifas.html
+        index.html -->  Rutas --> ./pages/tarifas.html#routes
+        index.html -->  Inicio --> ./pages/reservas.html
+        
+    2.Tarifas
+        tarifas.html -->  Inicio --> ../index.html
+        tarifas.html -->  Tarifas --> tarifas.html
+        tarifas.html -->  Rutas--> tarifas.html#routes
+        tarifas.html -->  Reservas --> reservas.html
+
+    3.Reservas
+        reservas.html -->  Inicio --> ../index.html
+        reservas.html -->  Tarifas --> tarifas.html
+        reservas.html -->  Rutas--> tarifas.html#routes
+        reservas.html -->  Reservas --> reservas.html

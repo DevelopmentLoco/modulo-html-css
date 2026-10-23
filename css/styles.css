@@ -1,3 +1,10 @@
+:root {
+    --link-bg: #008196;
+    --link-bg-hover: #cce6ea;
+    --table-border: black;
+    --table-header-bg: #f0edff;
+}
+
 .navbar {
     display: flex;
     align-items: center;
@@ -7,14 +14,14 @@
 nav a {
     display: inline-block;
     text-decoration: none;
-    background-color: #008196;
+    background-color: var(--link-bg);
     padding: 10px 20px;
     border-radius: 8px;
     color: black;
 }
 
 nav a:hover {
-    background-color: #cce6ea;
+    background-color: var(--link-bg-hover);
 }
 
 section {
@@ -22,14 +29,14 @@ section {
 }
 
 table {
-    border: 2px solid black;
+    border: 2px solid var(--table-border);
     border-collapse: collapse;
     text-align: left;
 }
 
 th,
 td {
-    border: 2px solid black;
+    border: 2px solid var(--table-border);
     padding: 12px;
 }
 
@@ -39,5 +46,5 @@ caption {
 }
 
 thead {
-    background-color: #f0edff;
+    background-color: var(--table-header-bg);
 }
