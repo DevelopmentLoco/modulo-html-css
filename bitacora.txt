@@ -80,7 +80,19 @@ Tabla de pruebas formulario:
     unclickable checkbox --> please check this box --> please check this box
 
 
+Paletas
 
+    crema (#FAF6EF): Fondo general 
+
+    Azul Noche (#14213D) para títulos: Al ser un azul casi negro, sobre el fondo Crema (#FAF6EF) genera un contraste altísimo y perfecto. Los títulos se van a leer con absoluta claridad.
+
+    Gris Asfalto (#5B6470) para textos secundarios: Es un gris en su cuota justa; ni muy claro (que se perdería), ni muy oscuro (que robaría protagonismo a los títulos).
+
+    Verde Ruta (#1E7A4F) para enlaces y botones principales: Es un verde bosque oscuro muy elegante que transmite confianza y da una excelente legibilidad.
+
+    Botón naranja: si le ponemos texto de color blanco encima, no se va a leer bien porque el contraste es muy bajo y las personas con problemas de vista (o bajo la luz del sol en un celular) van a batallar para leerlo.
+
+        Solución: asegurarse que el texto que lleve adentro sea color oscuro preferiblemente azul noche #14213D o negro sí garantizas que sea 100% legible y cumpla con las normas de accesibilidad web (WCAG).
 
 
 
