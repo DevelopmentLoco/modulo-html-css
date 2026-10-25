@@ -1,3 +1,5 @@
+Primer dia
+
 1.Localizar url completa
 
 URL completa: http://127.0.0.1:5500/index.html
@@ -6,7 +8,7 @@ protocolo: http
 host:: 127.0.0.1
 puerto: 5500
 ruta: 127.0.0.1/index.html
-Metodo: GET
+Método: GET
 status: 304 Not Modified
 
 Ruta no existente:
@@ -39,7 +41,7 @@ archivo de origen --> destino --> ruta escrita
 
 Segundo dia
 
-Se utilizo la estructura semantica mejor se añadió:
+Se utilizo la estructura semántica mejor se añadió:
 
 aside(contenido complementario) en la lista de que llevar, también se añadió aside a los horarios en reserva.
 
@@ -47,8 +49,22 @@ Los documentos html tienen header, nav, main, section y footer.
 
 El <div> dentro del footer se utiliza como un contenedor estético y maquetación para
 agrupar la información de contacto y derechos de autor. Mientras que footer 
-le otorga signficado semántico a la pagina, el div interno nos da el control en CSS
+le otorga significado semántico a la pagina, el div interno nos da el control en CSS
 para manejar el alineamiento, ancho máximo y espaciado en todo el bloque.
+
+Formulario:
+
+Se utilizaron inputs de tipo radio en selecciona tu bicicleta, selecciona tu plan
+y recorridos guiados ya que permite que el usuario pueda seleccionar una solo respuesta.
+
+Se utilizo un input de tipo checkbox para que el usuario pudiera aceptar o no aceptar
+los términos de servicio y políticas de alquiler.
+
+También se utilizo un input de tipo range para que el usuario pudiera seleccionar
+la cantidad de bicicletas que quiere tomando en cuenta el mínimo(1) y el máximo(6).
+
+
+
 
 
 

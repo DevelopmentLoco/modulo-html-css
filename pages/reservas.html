@@ -40,6 +40,102 @@
             </dl>
         </aside>
 
+        <form action="" method="post">
+            <fieldset>
+                <legend>Tus datos</legend>
+
+                <div>
+                    <label for="user-name">Nombre: </label>
+                    <input type="text" name="user_name" id="user-name" placeholder="Digita tu nombre" required minlength="3" required>
+                </div>
+
+                <div>
+                    <label for="user-email">Correo: </label>
+                    <input type="email" name="user_email" id="user-email" placeholder="hola@ruedalibre.example" required>
+                </div>
+
+                <div>
+                    <label for="user-document">Documento ID: </label>
+                    <input type="text" name="user_document" id="user-document" inputmode="numeric" placeholder="800531346" required>
+                </div>
+
+                <div>
+                    <label for="user-tel">Whatsapp: </label>
+                    <input type="tel" name="user_tel" id="user-tel" placeholder="+57314695845" required>
+                </div>
+
+                <div>
+                    <label for="user-date">Fecha de alquiler: </label>
+                    <input type="date" name="user_date" id="user-date" required>
+                </div>
+            </fieldset>
+
+            <fieldset id="bike-type">
+                <legend>Selecciona tu bicicleta</legend>
+                
+                <label>
+                    <input type="radio" name="bike_type" value="urban"> Urbana
+                </label>
+
+                <label>
+                    <input type="radio" name="bike_type" value="mountain" checked> Montaña
+                </label>
+
+                <label>
+                    <input type="radio" name="bike_type" value="electrical"> Eléctrica
+                </label>
+            </fieldset>
+
+
+            <fieldset id="plan">
+                <legend>Selecciona tu plan</legend>
+
+                <label>
+                    <input type="radio" name="plan" value="one-hour"> 1 Hora
+                </label>
+
+                <label>
+                    <input type="radio" name="plan" value="midday" checked> Medio día
+                </label>
+
+                <label>
+                    <input type="radio" name="plan" value="full-day"> Día completo
+                </label>
+            </fieldset>
+
+            <div>
+                <label for="count-bicycle">Cantidad de bicicletas</label>
+                <input type="range" name="count_bicycle" id="count-bicycle" min="1" max="6" value="3" oninput="this.nextElementSibling.value = this.value">
+                <output>3</output>
+            </div>
+            
+            <fieldset id="guided-tour">
+                <legend>Recorrido guiado</legend>
+
+                <label>
+                    <input type="radio" name="guided_tour" value="none"> Ninguno
+                </label>
+
+                <label>
+                    <input type="radio" name="guided_tour" value="routes" checked> Una de las tres rutas
+                </label>
+            </fieldset>
+                
+            <div>
+                <label for="user_comments">Comentarios adicionales: </label>
+                <textarea name="user_comments" id="user_comments" placeholder="¿Tienes alguna solicitud especial?"></textarea>
+            </div>
+
+            <div>
+                <label>
+                    <input type="checkbox" name="terms_accepted" id="terms-accepted" value="yes" required>
+                    Acepto las políticas de alquiler y términos de servicio
+                </label>
+            </div>
+            
+            <button type="submit">Enviar</button>
+        </form>
+
     </main>
 
     <footer>
