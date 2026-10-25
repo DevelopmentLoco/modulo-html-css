@@ -36,3 +36,21 @@ archivo de origen --> destino --> ruta escrita
         reservas.html -->  Tarifas --> tarifas.html
         reservas.html -->  Rutas--> tarifas.html#routes
         reservas.html -->  Reservas --> reservas.html
+
+Segundo dia
+
+Se utilizo la estructura semantica mejor se añadió:
+
+aside(contenido complementario) en la lista de que llevar, también se añadió aside a los horarios en reserva.
+
+Los documentos html tienen header, nav, main, section y footer.
+
+El <div> dentro del footer se utiliza como un contenedor estético y maquetación para
+agrupar la información de contacto y derechos de autor. Mientras que footer 
+le otorga signficado semántico a la pagina, el div interno nos da el control en CSS
+para manejar el alineamiento, ancho máximo y espaciado en todo el bloque.
+
+
+
+
+
