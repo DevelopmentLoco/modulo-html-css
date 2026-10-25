@@ -64,6 +64,21 @@ También se utilizo un input de tipo range para que el usuario pudiera seleccion
 la cantidad de bicicletas que quiere tomando en cuenta el mínimo(1) y el máximo(6).
 
 
+Tabla de pruebas formulario:
+    dato-de-prueba --> resultado-esperado --> resultado-obtenido
+
+    Joe --> please lengthen this text to 3 character --> 
+
+    hello --> please include '@' --> please include '@'
+    
+    10244 --> Debe contener entre 6 a 10 dígitos --> Debe contener entre 6 a 10 dígitos
+
+    3441044 --> Debe empezar con +57 y 3 seguido de 6 a 10 dígitos --> Debe empezar con +57 y 3 seguido de 6 a 10 dígitos
+
+    3035789654 --> Debe empezar con +57 y 3 seguido de 6 a 10 dígitos --> Debe empezar con +57 y 3 seguido de 6 a 10 dígitos
+
+    unclickable checkbox --> please check this box --> please check this box
+
 
 
 

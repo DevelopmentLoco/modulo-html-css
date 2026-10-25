@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,13 +40,13 @@
             </dl>
         </aside>
 
-        <form action="" method="post">
+        <form action="#" method="post">
             <fieldset>
                 <legend>Tus datos</legend>
 
                 <div>
                     <label for="user-name">Nombre: </label>
-                    <input type="text" name="user_name" id="user-name" placeholder="Digita tu nombre" required minlength="3" required>
+                    <input type="text" name="user_name" id="user-name" placeholder="Digita tu nombre" minlength="3" required>
                 </div>
 
                 <div>
@@ -56,17 +56,17 @@
 
                 <div>
                     <label for="user-document">Documento ID: </label>
-                    <input type="text" name="user_document" id="user-document" inputmode="numeric" placeholder="800531346" required>
+                    <input type="number" name="user_document" id="user-document" placeholder="8005313461" pattern="[0-9]{6,10}" required title="Debe contener entre 6 a 10 dígitos">
                 </div>
 
                 <div>
                     <label for="user-tel">Whatsapp: </label>
-                    <input type="tel" name="user_tel" id="user-tel" placeholder="+57314695845" required>
+                    <input type="tel" name="user_tel" id="user-tel" placeholder="+57314695845" pattern="\+573[0-9]{9}" required title="Debe empezar con +57 y 3 seguido de 6 a 10 dígitos">
                 </div>
 
                 <div>
                     <label for="user-date">Fecha de alquiler: </label>
-                    <input type="date" name="user_date" id="user-date" required>
+                    <input type="date" name="user_date" id="user-date" min="2026-11-01" max="2026-12-01" required>
                 </div>
             </fieldset>
 
@@ -123,7 +123,7 @@
                 
             <div>
                 <label for="user_comments">Comentarios adicionales: </label>
-                <textarea name="user_comments" id="user_comments" placeholder="¿Tienes alguna solicitud especial?"></textarea>
+                <textarea name="user_comments" id="user_comments" placeholder="¿Tienes alguna solicitud especial?" maxlength="300"></textarea>
             </div>
 
             <div>
