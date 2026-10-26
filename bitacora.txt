@@ -113,6 +113,17 @@ Paletas
         Naranja Vibrante (#F39A2B) con texto Azul Noche (#14213D)
 
         Uso: Botones secundarios.
-        
+
         Ponerle texto blanco a un fondo naranja claro es un error de accesibilidad. Usar el Azul Noche como color de tipografía sobre el fondo naranja crea un contraste dinámico, moderno y 100% legible bajo la luz del sol o para personas con fatiga visual.
 
+Tercer dia
+
+Se heredan las propiedades como color.
+background no se hereda.
+
+Especificidad
+
+la clase (activo) no afecta a la etiqueta (a) porque (id) tiene mas especificidad que la clase.
+
+#menu a = (1, 0, 1) --> 1 ID, 0 clases, 1 etiqueta.
+.activo = (0, 1, 0) --> 0 IDs, 1 clase, 0 etiquetas.
