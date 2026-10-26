@@ -82,18 +82,37 @@ Tabla de pruebas formulario:
 
 Paletas
 
-    crema (#FAF6EF): Fondo general 
+    1. Fondo General
+        Crema (#FAF6EF)
 
-    Azul Noche (#14213D) para títulos: Al ser un azul casi negro, sobre el fondo Crema (#FAF6EF) genera un contraste altísimo y perfecto. Los títulos se van a leer con absoluta claridad.
+        Uso: Fondo general de la página.
 
-    Gris Asfalto (#5B6470) para textos secundarios: Es un gris en su cuota justa; ni muy claro (que se perdería), ni muy oscuro (que robaría protagonismo a los títulos).
+        Por qué funciona: Es suave a la vista, evita el deslumbramiento del blanco puro y combina de forma excelente con tonos cálidos y fríos.
+    
+    2.Títulos y Textos Principales
+        Azul Noche (#14213D)
 
-    Verde Ruta (#1E7A4F) para enlaces y botones principales: Es un verde bosque oscuro muy elegante que transmite confianza y da una excelente legibilidad.
+        Uso: Títulos (h1, h2, h3) y textos principales donde se requiera máxima jerarquía.
 
-    Botón naranja: si le ponemos texto de color blanco encima, no se va a leer bien porque el contraste es muy bajo y las personas con problemas de vista (o bajo la luz del sol en un celular) van a batallar para leerlo.
+        Por qué funciona: Genera un contraste altísimo y perfecto sobre el fondo crema. Se lee con absoluta claridad.
 
-        Solución: asegurarse que el texto que lleve adentro sea color oscuro preferiblemente azul noche #14213D o negro sí garantizas que sea 100% legible y cumpla con las normas de accesibilidad web (WCAG).
+    3. Gris Asfalto (#5B6470)
 
+        Uso: Bordes de tarjetas (cards), líneas divisorias entre secciones, campos de texto/inputs sin enfocar o fondos de elementos secundarios.
 
+        Por qué funciona: Aprovechar ese tono claro para estructurar el diseño sin obligar al ojo a forzarse intentando leer texto sobre él.
 
+    4. Botones Principales (CTA Primario)
+        Verde Ruta (#1E7A4F) posiblemente con texto Blanco (#FFFFFF) o azul noche
+
+        Uso: Botones de acción principal (ej. "Reservar ahora", "Comprar").
+
+        Por qué funciona: Al ser un verde bosque profundo y oscuro, el texto blanco resalta perfectamente y cumple sin problemas con los estándares de contraste WCAG. Transmite confianza y estabilidad.
+
+    5. Botones Secundarios, Alertas o Elementos Destacados
+        Naranja Vibrante (#F39A2B) con texto Azul Noche (#14213D)
+
+        Uso: Botones secundarios.
+        
+        Ponerle texto blanco a un fondo naranja claro es un error de accesibilidad. Usar el Azul Noche como color de tipografía sobre el fondo naranja crea un contraste dinámico, moderno y 100% legible bajo la luz del sol o para personas con fatiga visual.
 

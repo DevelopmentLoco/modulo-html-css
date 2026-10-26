@@ -1,50 +1,28 @@
 :root {
-    --link-bg: #008196;
-    --link-bg-hover: #cce6ea;
-    --table-border: black;
-    --table-header-bg: #f0edff;
+    --bg-primary-cream: #FAF6EF;
+    --title-primary-blue: #14213D;
+    --bordes-grey: #5B6470;
+    --btn-links-green: #1E7A4F;
+    --btn-secondary-orange: #F39A2B;
+    
+
+    --font-heading: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+    --font-body: 'Open Sans', Arial, Helvetica, sans-serif;
+
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
 }
 
-.navbar {
-    display: flex;
-    align-items: center;
-    gap: 16px;
+body {
+    background-color: var(--bg-primary-cream);
 }
 
-nav a {
-    display: inline-block;
-    text-decoration: none;
-    background-color: var(--link-bg);
-    padding: 10px 20px;
-    border-radius: 8px;
-    color: black;
+h1, h2, h3 {
+    color: var(--title-primary-blue);
 }
 
-nav a:hover {
-    background-color: var(--link-bg-hover);
-}
 
-section {
-    margin-bottom: 40px;
-}
 
-table {
-    border: 2px solid var(--table-border);
-    border-collapse: collapse;
-    text-align: left;
-}
 
-th,
-td {
-    border: 2px solid var(--table-border);
-    padding: 12px;
-}
 
-caption {
-    font-weight: bold;
-    padding: 8px;
-}
-
-thead {
-    background-color: var(--table-header-bg);
-}
