@@ -17,6 +17,20 @@
 
 body {
     background-color: var(--bg-primary-cream);
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+main {
+    max-width: 65rem;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
 }
 
 h1, h2, h3 {
@@ -61,5 +75,51 @@ input[checkbox]:focus {
     outline-offset: 3px;
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: var(--spacing-xxl);
+}
 
+th, td {
+    padding: var(--spacing-md);
+    border: 1px solid var(--bordes-grey);
+    text-align: left;
+}
 
+th {
+    background-color: var(--title-primary-blue);
+    color: #ffffff; 
+}
+
+form {
+    display: block;
+    margin-bottom: var(--spacing-xxl);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-lg); /* Separación entre grupos */
+}
+
+label {
+    display: block;
+    margin-bottom: var(--spacing-sm);
+    color: var(--title-primary-blue);
+    font-weight: 600;
+}
+
+.servicio-card {
+    padding: var(--spacing-lg);
+    border: 1px solid var(--bordes-grey); /* Usando px solo para bordes */
+    border-radius: var(--spacing-sm);
+    margin-bottom: var(--spacing-xxl);
+    background-color: #ffffff;
+}
+
+footer {
+    background-color: var(--title-primary-blue);
+    color: var(--bg-primary-cream);
+    margin-top: var(--spacing-xxl);
+    padding: var(--spacing-xxl) var(--spacing-md) 0 var(--spacing-md);
+    border-top: 2px solid var(--btn-secondary-orange); /* Borde en px */
+}
