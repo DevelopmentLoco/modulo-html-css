@@ -127,3 +127,74 @@ la clase (activo) no afecta a la etiqueta (a) porque (id) tiene mas especificida
 
 #menu a = (1, 0, 1) --> 1 ID, 0 clases, 1 etiqueta.
 .activo = (0, 1, 0) --> 0 IDs, 1 clase, 0 etiquetas.
+
+Decisiones
+
+    Etiqueta "Nuevo":
+        Agregue una tarjeta de "Bicicletas eléctricas" en index.html con un <span class="etiqueta">Nuevo</span>.
+        La tarjeta tiene position: relative y la etiqueta position: absolute con top y right,
+        asi queda en la esquina superior derecha de la tarjeta y no mueve el contenido.
+
+    Enlace de WhatsApp:
+        Esta en las tres paginas, antes de cerrar el body, con la clase "whatsapp".
+        Usa position: fixed con bottom y right, por eso se ve siempre al hacer scroll.
+        Abre https://wa.me/573000000000 en otra pestaña (target="_blank") y tiene el texto "WhatsApp" visible.
+        Como es un <a> se puede enfocar con Tab, y en :focus le puse un borde (outline) para verlo.
+
+    Que no tape el contenido:
+        Al footer le subi el padding de abajo a 5rem, asi el boton queda sobre espacio libre
+        cuando se llega al final de la pagina.
+
+    Consistencia de las tres paginas:
+        - En tarifas.html el id="menu" estaba en el <nav> y en las otras dos en el <ul>. Lo deje igual en las tres (<ul id="menu">).
+        - En tarifas.html "Tarifas" y "Rutas" tenian la clase activo a la vez. Deje solo "Tarifas".
+        - A reservas.html le faltaba el meta description. Lo agregue igual que en las otras.
+        - El boton "Enviar" ahora comparte estilo con "Reservar ahora" (selector agrupado .action, button).
+
+    Limpieza de styles.css:
+        - Quite .form-group (ningun HTML la usaba).
+        - Quite display: block en form (ya es block por defecto).
+        - Corregi input[checkbox]:focus, que estaba mal escrito, por input[type="checkbox"]:focus.
+        - Agrupe input:focus con textarea:focus y .action con button.
+        - Aplique las fuentes: las variables --font-heading y --font-body existian pero no se usaban en ninguna regla.
+        - Organice el archivo en secciones con comentarios: variables, base, navegacion, componentes y formulario.
+
+Pruebas
+
+    dato-de-prueba --> resultado-esperado --> resultado-obtenido
+
+    Revisar rutas (href y src) de las 3 paginas --> ninguna da 404 --> todas existen
+    Hoja de estilos enlazada en las 3 paginas --> styles.css cargada --> OK
+    Enlace de WhatsApp en las 3 paginas --> 1 por pagina --> OK
+    Tab hasta el enlace de WhatsApp --> se ve el borde de foco --> (completar al probar en el navegador)
+    DevTools > Elements/Styles --> sin declaraciones tachadas inesperadas --> (completar al probar en el navegador)
+    DevTools > Network --> sin errores 404 --> (completar al probar en el navegador)
+    Recorrer el sitio solo con teclado --> menu, botones y formulario accesibles --> (completar al probar en el navegador)
+
+Publicacion
+
+    Commit de lanzamiento: (escribir aqui el mensaje del commit)
+    URL de GitHub Pages: (pegar aqui la URL)
+
+
+Cierre de la semana
+
+    MiniReto 1 - Kilometro 0: cree el repositorio, la estructura de carpetas, el index.html base y esta bitacora.
+    MiniReto 2 - La vitrina: arme la pagina de inicio con titulos, listas, imagenes y enlaces.
+    MiniReto 3 - Tarifas claras: hice las tablas de tarifas y recorridos y las rutas relativas entre carpetas.
+    MiniReto 4 - Sitio navegable: agregue la pagina de reservas, el menu y el pie comunes a las paginas.
+    MiniReto 5 - Estructura con significado: use header, nav, main, section, aside y footer en las tres paginas.
+    MiniReto 6 - Formulario de reservas: hice el formulario con fieldsets, labels y distintos tipos de campos.
+    MiniReto 7 - Reservas sin errores: agregue validacion nativa (required, minlength, pattern) y probe con teclado.
+    MiniReto 8 - Sitio en linea: revise accesibilidad, defini la paleta de colores y publique el sitio.
+    MiniReto 9 - Identidad: cree la hoja externa styles.css con variables, tipografias y colores.
+    MiniReto 10 - Navegacion con estados: estilice :hover y :focus, la clase activo y los botones.
+    MiniReto 11 - Modelo de caja: ajuste padding, margenes y bordes en tarjetas, tablas, formulario y contenedor.
+    MiniReto 12 - Lanzamiento: agregue la etiqueta "Nuevo", el boton fijo de WhatsApp, ordene el CSS y revise el sitio.
+
+    Lo que mejoraria:
+        - Los enlaces del menu estan directamente dentro del <ul>; deberian ir dentro de <li>.
+        - Las imagenes pesan mucho (bicycle.jpg y bicycle-route.jpg son de varios MB); las comprimiria.
+        - Quitaria el border="1" de las tablas en el HTML, porque el CSS ya pone los bordes.
+        - Haria que el menu se vea bien en celular.
+        - Usaria una sola vez los enlaces de las fuentes de Google (hoy estan repetidos los preconnect).
