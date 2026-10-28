@@ -171,3 +171,23 @@ input[type="checkbox"]:focus {
     outline: 2px solid var(--btn-links-green);
     outline-offset: 3px;
 }
+
+
+.flota-cards img {
+    max-width: 8rem;
+    height: auto;
+}
+
+.flota-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
+}
+
+
+.bicycle-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
