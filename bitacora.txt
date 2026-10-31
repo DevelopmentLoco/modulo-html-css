@@ -198,3 +198,23 @@ Cierre de la semana
         - Quitaria el border="1" de las tablas en el HTML, porque el CSS ya pone los bordes.
         - Haria que el menu se vea bien en celular.
         - Usaria una sola vez los enlaces de las fuentes de Google (hoy estan repetidos los preconnect).
+
+Semana 2, dia 2
+
+Criterio            CSS Propio        
+Lineas de codigo:   Alto (requiere maquetar media queries y 
+                    reglas de grid/flexbox desde cero).
+
+Criterio: 
+Lineas de codigo:   Bootstrap
+                    Reducido (la grilla se resuelve de forma 
+                    inmediata con clases como row y col).
+
+Criterio
+Tiempo invertido:   CSS Propio
+                    Mayor (desarrollo y pruebas manuales de responsividad).
+
+Criterio
+Tiempo Invertido:   Bootstrap
+                    Menor (implementación ágil y 
+                    rápida gracias a componentes prediseñados).
