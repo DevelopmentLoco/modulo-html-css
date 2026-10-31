@@ -12,6 +12,8 @@
     --spacing-md: 1rem;
     --spacing-lg: 1.25rem;
     --spacing-xxl: 2rem;
+
+    --img-cards: 8rem;
 }
 
 
@@ -19,6 +21,8 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -27,6 +31,7 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
+    overflow: scroll;
 }
 
 header {
@@ -174,7 +179,7 @@ input[type="checkbox"]:focus {
 
 
 .flota-cards img {
-    max-width: 8rem;
+    max-width: var(--img-cards);
     height: auto;
 }
 
@@ -190,4 +195,17 @@ input[type="checkbox"]:focus {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+@media (max-width: 480px) {
+  .img-service {
+    width: 15rem;
+    height: auto;
+  }
+  .rent li{
+    margin: var(--spacing-sm);
+  }
+  .mettings li {
+    margin: var(--spacing-sm);
+  }
 }
