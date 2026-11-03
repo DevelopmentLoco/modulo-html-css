@@ -186,26 +186,6 @@ input[type="checkbox"]:focus {
     outline-offset: 3px;
 }
 
-
-.flota-cards img {
-    max-width: var(--img-cards);
-    height: auto;
-}
-
-.flota-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
-    gap: var(--spacing-sm);
-    margin-top: var(--spacing-lg);
-}
-
-
-.bicycle-cards {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
 .image-port {
     max-width: 20rem;
     height: auto;

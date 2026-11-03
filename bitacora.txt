@@ -247,6 +247,17 @@ después de bootstrap, ayudo a que no hubieran conflictos, lo que se hizo fue
 revisar que todos los estilos se estuvieran aplicando correctamente en 
 diferentes dispositivos.
 
+Reducción de CSS: 30%.
+
+Ventajas observadas
+
+Menor necesidad de escribir reglas CSS para distribuir elementos.
+
+Diseño responsive mediante clases predefinidas.
+
+Mayor rapidez al organizar columnas y componentes.
+
+Reutilización de clases en diferentes páginas.
 
 
 

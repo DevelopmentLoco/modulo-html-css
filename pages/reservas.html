@@ -17,8 +17,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
+    <!--own css-->
     <link rel="icon" href="../img/logo.png">
     <link rel="stylesheet" href="../css/styles.css">
 
@@ -28,139 +33,148 @@
     <header class="navbar">
         <img src="../img/logo.png" width="100" alt="Logo de rueda libre">
         
-        <nav>
-            <ul id="menu">
-                <a href="../index.html">Inicio</a>
-                <a href="tarifas.html">Tarifas</a>
-                <a href="tarifas.html#routes">Rutas</a>
-                <a href="reservas.html" class="activo">Reservas</a>
-                <a href="catalogo-bootstrap.html">Catalogo</a>
-            </ul>
-        </nav>
-    </header>
+            <nav>
+                <ul id="menu">
+                    <a href="../index.html">Inicio</a>
+                    <a href="tarifas.html">Tarifas</a>
+                    <a href="tarifas.html#routes">Rutas</a>
+                    <a href="reservas.html" class="activo">Reservas</a>
+                    <a href="catalogo-bootstrap.html">Catalogo</a>
+                </ul>
+            </nav>
+        </header>
 
-    <main>
-        <h1>Reserva tu bicicleta</h1>
-        <a href="mailto:hola@ruedalibre.example">Solicitar información de alquiler y guía</a>
+        <main class="container py-5">
 
-        <aside>
-            <dl>
-                <dt>Horarios de atención:</dt>
-                <dd>lunes a viernes de 7:00 a.m a 7:00 p.m</dd>
-                <dd>Sábados, domingos y festivos de 6:00 a.m a 2:00 p.m</dd>
+            <h1 class="mb-3">Reserva tu bicicleta</h1>
 
-            </dl>
-        </aside>
-
-        <form action="#" method="post">
-            <fieldset>
-                <legend>Tus datos</legend>
-
-                <div>
-                    <label for="user-name">Nombre: </label>
-                    <input type="text" name="user_name" id="user-name" placeholder="Digita tu nombre" minlength="3" required>
-                </div>
-
-                <div>
-                    <label for="user-email">Correo: </label>
-                    <input type="email" name="user_email" id="user-email" placeholder="hola@ruedalibre.example" required>
-                </div>
-
-                <div>
-                    <label for="user-document">Documento ID: </label>
-                    <input type="number" name="user_document" id="user-document" placeholder="8005313461" pattern="[0-9]{6,10}" required title="Debe contener entre 6 a 10 dígitos">
-                </div>
-
-                <div>
-                    <label for="user-tel">Whatsapp: </label>
-                    <input type="tel" name="user_tel" id="user-tel" placeholder="+57314695845" pattern="\+573[0-9]{9}" required title="Debe empezar con +57 y 3 seguido de 6 a 10 dígitos">
-                </div>
-
-                <div>
-                    <label for="user-date">Fecha de alquiler: </label>
-                    <input type="date" name="user_date" id="user-date" min="2026-11-01" max="2026-12-01" required>
-                </div>
-            </fieldset>
-
-            <fieldset id="bike-type">
-                <legend>Selecciona tu bicicleta</legend>
-                
-                <label>
-                    <input type="radio" name="bike_type" value="urban"> Urbana
-                </label>
-
-                <label>
-                    <input type="radio" name="bike_type" value="mountain" checked> Montaña
-                </label>
-
-                <label>
-                    <input type="radio" name="bike_type" value="electrical"> Eléctrica
-                </label>
-            </fieldset>
-
-
-            <fieldset id="plan">
-                <legend>Selecciona tu plan</legend>
-
-                <label>
-                    <input type="radio" name="plan" value="one-hour"> 1 Hora
-                </label>
-
-                <label>
-                    <input type="radio" name="plan" value="midday" checked> Medio día
-                </label>
-
-                <label>
-                    <input type="radio" name="plan" value="full-day"> Día completo
-                </label>
-            </fieldset>
-
-            <div>
-                <label for="count-bicycle">Cantidad de bicicletas</label>
-                <input type="range" name="count_bicycle" id="count-bicycle" min="1" max="6" value="3" oninput="this.nextElementSibling.value = this.value">
-                <output>3</output>
-            </div>
+            <a href="mailto:hola@ruedalibre.example" class="mb-3">Solicitar información de alquiler y guía</a>
             
-            <fieldset id="guided-tour">
-                <legend>Recorrido guiado</legend>
+            <div class="row g-4">
 
-                <label>
-                    <input type="radio" name="guided_tour" value="none"> Ninguno
-                </label>
+                <section class="col-12 col-md-8">
+                    <form action="#" method="post">
+                        <fieldset>
+                            <legend>Tus datos</legend>
 
-                <label>
-                    <input type="radio" name="guided_tour" value="routes" checked> Una de las tres rutas
-                </label>
-            </fieldset>
-                
-            <div>
-                <label for="user_comments">Comentarios adicionales: </label>
-                <textarea name="user_comments" id="user_comments" placeholder="¿Tienes alguna solicitud especial?" maxlength="300"></textarea>
+                            <div>
+                                <label for="user-name">Nombre: </label>
+                                <input type="text" name="user_name" id="user-name" placeholder="Digita tu nombre" minlength="3" required>
+                            </div>
+
+                            <div>
+                                <label for="user-email">Correo: </label>
+                                <input type="email" name="user_email" id="user-email" placeholder="hola@ruedalibre.example" required>
+                            </div>
+
+                            <div>
+                                <label for="user-document">Documento ID: </label>
+                                <input type="number" name="user_document" id="user-document" placeholder="8005313461" pattern="[0-9]{6,10}" required title="Debe contener entre 6 a 10 dígitos">
+                            </div>
+
+                            <div>
+                                <label for="user-tel">Whatsapp: </label>
+                                <input type="tel" name="user_tel" id="user-tel" placeholder="+57314695845" pattern="\+573[0-9]{9}" required title="Debe empezar con +57 y 3 seguido de 6 a 10 dígitos">
+                            </div>
+
+                            <div>
+                                <label for="user-date">Fecha de alquiler: </label>
+                                <input type="date" name="user_date" id="user-date" min="2026-11-01" max="2026-12-01" required>
+                            </div>
+                        </fieldset>
+
+                        <fieldset id="bike-type">
+                            <legend>Selecciona tu bicicleta</legend>
+                            
+                            <label>
+                                <input type="radio" name="bike_type" value="urban"> Urbana
+                            </label>
+
+                            <label>
+                                <input type="radio" name="bike_type" value="mountain" checked> Montaña
+                            </label>
+
+                            <label>
+                                <input type="radio" name="bike_type" value="electrical"> Eléctrica
+                            </label>
+                        </fieldset>
+
+
+                        <fieldset id="plan">
+                            <legend>Selecciona tu plan</legend>
+
+                            <label>
+                                <input type="radio" name="plan" value="one-hour"> 1 Hora
+                            </label>
+
+                            <label>
+                                <input type="radio" name="plan" value="midday" checked> Medio día
+                            </label>
+
+                            <label>
+                                <input type="radio" name="plan" value="full-day"> Día completo
+                            </label>
+                        </fieldset>
+
+                        <div>
+                            <label for="count-bicycle">Cantidad de bicicletas</label>
+                            <input type="range" name="count_bicycle" id="count-bicycle" min="1" max="6" value="3" oninput="this.nextElementSibling.value = this.value">
+                            <output>3</output>
+                        </div>
+                        
+                        <fieldset id="guided-tour">
+                            <legend>Recorrido guiado</legend>
+
+                            <label>
+                                <input type="radio" name="guided_tour" value="none"> Ninguno
+                            </label>
+
+                            <label>
+                                <input type="radio" name="guided_tour" value="routes" checked> Una de las tres rutas
+                            </label>
+                        </fieldset>
+                            
+                        <div>
+                            <label for="user_comments">Comentarios adicionales: </label>
+                            <textarea name="user_comments" id="user_comments" placeholder="¿Tienes alguna solicitud especial?" maxlength="300"></textarea>
+                        </div>
+
+                        <div>
+                            <label>
+                                <input type="checkbox" name="terms_accepted" id="terms-accepted" value="yes" required>
+                                Acepto las políticas de alquiler y términos de servicio
+                            </label>
+                        </div>
+                        
+                        <button type="submit">Enviar</button>
+                    </form>
+
+                </section>
+
+                <aside class="col-12 col-md-4">
+                    <div class="card p-3">
+                        <dl>
+                            <dt class="text-bg-success fw-bold">Horarios de atención:</dt>
+                            <dd>lunes a viernes de 7:00 a.m a 7:00 p.m</dd>
+                            <dd>Sábados, domingos y festivos de 6:00 a.m a 2:00 p.m</dd>
+
+                        </dl>
+                    </div> 
+                </aside>
             </div>
+        </main>
 
+        <footer>
             <div>
-                <label>
-                    <input type="checkbox" name="terms_accepted" id="terms-accepted" value="yes" required>
-                    Acepto las políticas de alquiler y términos de servicio
-                </label>
+                <p>Rueda libre</p>
+                <p>
+                    Contacto: <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a>
+                </p>
+                <p>
+                    <small>&copy; <span>2026</span> Rueda Libre. Todos los derechos reservados</small>
+                </p>
             </div>
-            
-            <button type="submit">Enviar</button>
-        </form>
-
-    </main>
-
-    <footer>
-        <div>
-            <p>Rueda libre</p>
-            <p>
-                Contacto: <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a>
-            </p>
-            <p>
-                <small>&copy; <span>2026</span> Rueda Libre. Todos los derechos reservados</small>
-            </p>
-        </div>
-    </footer>
-    <a href="https://wa.me/573000000000" target="_blank" rel="noopener" class="whatsapp">WhatsApp</a>
+        </footer>
+        <a href="https://wa.me/573000000000" target="_blank" rel="noopener" class="whatsapp">WhatsApp</a>
 </body>
 </html>
