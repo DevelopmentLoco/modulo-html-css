@@ -218,3 +218,13 @@ Criterio
 Tiempo Invertido:   Bootstrap
                     Menor (implementación ágil y 
                     rápida gracias a componentes prediseñados).
+
+Semana 2, dia 3
+
+Cinco clases de Bootstrap:
+
+col-md-6	Crea una columna que ocupa la mitad del ancho desde md.
+flex-md-row	Cambia la dirección de Flexbox a horizontal desde md.
+d-none	Oculta un elemento.
+gap-3	Agrega separación entre elementos.
+py-5	Agrega espacio interno arriba y abajo.
