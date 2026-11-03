@@ -1,3 +1,6 @@
+/* 
+Identidad visual compartida: colores y tipografías de marca 
+*/
 :root {
     --bg-primary-cream: #FAF6EF;
     --title-primary-blue: #14213D;
@@ -16,7 +19,9 @@
     --img-cards: 8rem;
 }
 
-
+/*
+   Estilos base compartidos
+*/
 *,
 *::before,
 *::after {
@@ -141,7 +146,7 @@ th {
     outline: 3px solid var(--title-primary-blue);
 }
 
-/* Pie de página (el padding de abajo deja espacio para el botón de WhatsApp) */
+/* Pie de página de las páginas que todavía usan la maquetación anterior */
 footer {
     display: flex;
     flex-direction: column;
@@ -153,6 +158,10 @@ footer {
 }
 
 
+/*
+   Formularios: tarifas y reservas,
+   estas reglas se conservan porque esas páginas las necesitan.
+ */
 form {
     margin-bottom: var(--spacing-xxl);
 }
@@ -195,6 +204,12 @@ input[type="checkbox"]:focus {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.image-port {
+    max-width: 20rem;
+    height: auto;
+    object-fit: cover;
 }
 
 @media (max-width: 480px) {

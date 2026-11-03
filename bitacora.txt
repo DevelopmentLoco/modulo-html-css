@@ -228,3 +228,25 @@ flex-md-row	Cambia la dirección de Flexbox a horizontal desde md.
 d-none	Oculta un elemento.
 gap-3	Agrega separación entre elementos.
 py-5	Agrega espacio interno arriba y abajo.
+
+Semana 2 - Migración de inicio a Bootstrap
+
+Cambios realizados
+- Agregué Bootstrap 5.3.8 (CSS) en index.html y dejé styles.css después de Bootstrap para respetar la cascada.
+- Agregué el bundle JavaScript de Bootstrap para que funcione el menú desplegable en pantallas pequeñas.
+- Organicé la portada con container, row, col-12, col-lg-6, utilidades de espaciado y flexbox.
+- Migré las seis tarjetas de la flota a row, row-cols-1, row-cols-sm-2, row-cols-lg-3, col, card, h-100 e img-fluid.
+- Organicé la galería de rutas con row, row-cols-1, row-cols-md-3, col y card.
+- Incorporé la sección de beneficios del catálogo Bootstrap usando row, row-cols-1, row-cols-sm-2, row-cols-lg-4 y utilidades.
+- Incorporé una franja de llamada a la acción responsive con row, col-12, col-md-7, col-md-5 y utilidades flex.
+
+Prueba en varios dispositivos exitosa:
+
+Se encontraron pocos conflictos en DevTools ya que haber puesto el css propio
+después de bootstrap, ayudo a que no hubieran conflictos, lo que se hizo fue
+revisar que todos los estilos se estuvieran aplicando correctamente en 
+diferentes dispositivos.
+
+
+
+

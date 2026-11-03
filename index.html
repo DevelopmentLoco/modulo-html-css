@@ -18,6 +18,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!--own css-->
     <link rel="icon" href="./img/logo.png">
     <link rel="stylesheet" href="./css/styles.css">
     
@@ -40,21 +46,29 @@
      
     <main>
     
-        <h1>Rueda libre</h1>
-        
-        <figure>
-            <img src="./img/portada.jpeg" width="300" alt="Una bicicleta naranjada, montañas y una carretera">
-        </figure>
+        <!-- Portada: distribución con container, row y columnas de Bootstrap -->
 
+        <section class="container py-5 ">
+            <div class="row align-items-center g-4 g-lg-5">
+                
+                <div class="col-12 col-lg-6">
+                    <p class="mb-2 fw-bold text-success">Muévete, explora, disfruta</p>
+                    <h1 class="display-4 fw-bold mb-3">Rueda Libre</h1>
+                    <p class="lead mb-4">Alquila tu bicicleta y descubre la ciudad y la naturaleza a tu propio ritmo.</p>
+                    
+                    <div class="d-flex flex-column flex-sm-row gap-3">
+                        <a href="./pages/reservas.html" class="btn btn-success">Reservar ahora</a>
+                        <a href="#flota" class="btn btn-warning">Conoce nuestra flota</a>
+                    </div>
+                </div>
 
-        <section>
-            <h2>¿Quiénes somos?</h2>
-
-            <p>Somos una empresa apasionada por el ciclismo y el turismo local, dedicada a conectar a las personas con la ciudad y la naturaleza de una manera activa, sostenible y divertida. Nuestro objetivo es ofrecerte todo lo que necesitas sobre ruedas, ya sea que busques explorar por tu cuenta, vivir una experiencia guiada inolvidable o mantener tu propia bicicleta a punto. Creemos en un servicio cercano, seguro y de alta calidad para que cada rodada sea una gran experiencia.</p>
-
-            <a href="#mettings">Encuéntranos</a>
-
+                <div class="col-12 col-lg-6">
+                    <img src="./img/portada.jpeg" class="img-fluid rounded-3 shadow-sm w-100 image-port" alt="Una bicicleta naranja junto a montañas y una carretera">
+                </div>
+            </div>
         </section>
+
+        <!--Servicios-->
 
         <section class="servicio-card">
             <h2>Nuestros servicios</h2>
@@ -111,6 +125,163 @@
             </ul>
         </article>
 
+        <a href="./pages/reservas.html" class="action">Reservar ahora</a>
+
+        <!--Flota-->
+
+        <section id="flota" class="container py-5">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold">Nuestra flota</h2>
+                <p>Encuentra la bicicleta ideal para tu próxima aventura.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-12 col-sm-2 col-lg-3 col-xl-4">
+                    <article class="card h-100 shadow-sm p-3">
+                        <img src="../img/bicycle-urban.jpeg" alt="bicicleta urbana negra con verde" width="178" class="img-fluid object-fit-cover">
+
+                        <h2>Urbana Clásica</h2>
+
+                        <p>Cómoda y liviana para las ciclorrutas.</p>
+
+                        <p>Precio por hora: $10.000</p>
+                    </article>
+                </div>
+
+                <div class="col-12 col-sm-2 col-lg-3 col-xl-4">
+                <article class="card h-100 shadow-sm p-3">
+                        <img src="../img/bicycle-pleglable.jpeg" alt="bicicleta urbana pleglable con negro y verde" width="178" class="img-fluid object-fit-cover">
+
+                        <h2>Urbana Plegable</h2>
+
+                        <p>Se dobla en segundos; ideal para combinar con el metro.</p>
+
+                        <p>Precio por hora: $12.000</p>
+                    </article>
+                </div>
+
+                <div class="col-12 col-sm-2 col-lg-3 col-xl-4">
+                    <article class="card h-100 shadow-sm p-3">
+                        <img src="../img/bicycle-mountain.jpeg" alt="Bicicleta negra para montaña" width="178" class="img-fluid object-fit-cover">
+
+                        <h2>Montaña Trail</h2>
+
+                        <p>Suspensión delantera y 21 cambios para las subidas.</p>
+
+                        <p>Precio por hora: $15.000</p>
+                    </article>
+                </div>
+
+                <div class="col-12 col-sm-2 col-lg-3 col-xl-4">
+                    <article class="card h-100 shadow-sm p-3">
+                        <img src="../img/bicycle-gravel-aventura.jpeg" alt="Bicicleta negra" width="178" class="img-fluid object-fit-cover">
+
+                        <h2>Gravel Aventura</h2>
+
+                        <p>Para rutas mixtas de asfalto y destapado.</p>
+
+                        <p>Precio por hora:  $18.000</p>
+                    </article>
+                </div>
+
+                <div class="col-12 col-sm-2 col-lg-3 col-xl-4">
+                    <article class="card h-100 shadow-sm p-3">
+                        <img src="../img/bicycle-electric.jpeg" alt="Bicicleta electrica con llantas negra, color madera" width="178" class="img-fluid object-fit-cover">
+
+                        <h2>Eléctrica Urbana</h2>
+
+                        <p>Asistencia eléctrica con 45 km de autonomía.</p>
+
+                        <p>Precio por hora: $25.000</p>
+                    </article>
+                </div>
+
+                <div class="col-12 col-sm-2 col-lg-3 col-xl-4">
+                    <article class="card h-100 shadow-sm p-3">
+                        <img src="../img/bicycle-boys.jpeg" alt="Bicicleta negra con suspension dorada" width="178" class="img-fluid object-fit-cover">
+
+                        <h2>Infantil</h2>
+
+                        <p>Para niños de 6 a 10 años.</p>
+
+                        <p>Precio por hora: $8.000</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!--Beneficios-->
+        <section class="container card shadow-sm py-5">
+            <h2 class="text-center mb-3">¿Por qué Rueda Libre?</h2>
+
+            <div class="row g-3">
+
+                <div class="col-12 col-md-6 col-lg-3 text-start">
+                    <article>
+                        <img src="../img/icon-bicycle.webp" alt="Bicicleta negra con llantas gruesas especializadas para montaña" class="img-fluid w-25">
+
+                        <h3>Bicicletas revisadas</h3>
+                        <p>Revisión antes de cada alquiler.</p>
+                        <p class="text-success fw-bold">100% revisadas</p>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3 text-start">
+                    <article>
+                        <img src="../img/sure.png" alt="Icono de seguridad" class="img-fluid w-25">
+
+                        <h3>Casco y candado</h3>
+                        <p>Incluidos en el alquiler.</p>
+                        <p class="text-success fw-bold">Sin costo adicional</p>
+                    </article>
+                
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3 text-start">
+
+                    <article>
+                        <img src="../img/certificate.png" alt="Icono de certificado" class="img-fluid w-25">
+
+                        <h3>Guías certificados</h3>
+                        <p>Personal capacitado para acompañarte.</p>
+                        <p class="text-success fw-bold">Guías certificados</p>
+                    </article>
+                
+                </div>
+                
+                <div class="col-12 col-md-6 col-lg-3 text-start">
+                    <article>
+                        <img src="../img/ubication.png" alt="Icono de ubicación rojo con verde" class="img-fluid w-25">
+
+                        <h3>Puntos de devolución</h3>
+                        <p>Disponibilidad en tres sedes.</p>
+                        <p class="text-success fw-bold">3 sedes</p>
+                    </article>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!--Franja llamada a la acción-->
+
+        <section class="text-center my-5 card py-3 shadow-sm">
+            <div class="d-flex flex-column flex-md-row justify-content-around align-items-center">
+                <div>
+                    <h2>¿Listo para rodar?</h2>
+                    <p>Reserva tu bicicleta y disfruta de una nueva aventura.</p>
+                </div>
+            
+                <div>
+                    <a href="reservas.html" class="d-inline-block text-decoration-none bg-success text-white px-2 py-3 rounded-3 border border-primary border-2">Reservar ahora</a>
+
+                    <img src="../img/cyclist.png" alt="Ciclista con uniforme azul y una bicicleta azul con blanco" class="img-fluid w-25 d-none d-md-inline-block">
+                </div>
+            </div>
+        </section>
+
+        <!--Encuéntranos-->
+
         <section class="mettings">
               <h2 id="mettings">Encuéntranos</h2>
               
@@ -132,73 +303,6 @@
                 
                 <li><strong>Redes sociales:</strong> Síguenos en Instagram y Facebook como @ruedalibre para ver fotos de las rutas y enterarte de nuestras próximas salidas.</li>
               </ul>
-        </section>
-
-        <a href="./pages/reservas.html" class="action">Reservar ahora</a>
-
-        <section class="flota-cards">
-
-            <article class="bicycle-cards">
-                <img src="./img/bicycle-urban.jpeg" width="365" height="547" alt="bicicleta urbana negra con verde">
-
-                <h2>Urbana Clásica</h2>
-
-                <p>Cómoda y liviana para las ciclorrutas.</p>
-
-                <p>Precio por hora: $10.000</p>
-            </article>
-
-            <article class="bicycle-cards">
-                <img src="./img/bicycle-pleglable.jpeg" alt="bicicleta urbana pleglable con negro y verde">
-
-                <h2>Urbana Plegable</h2>
-
-                <p>Se dobla en segundos; ideal para combinar con el metro.</p>
-
-                <p>Precio por hora: $12.000</p>
-            </article>
-
-            <article class="bicycle-cards">
-                <img src="./img/bicycle-mountain.jpeg" alt="Bicicleta negra para montaña">
-
-                <h2>Montaña Trail</h2>
-
-                <p>Suspensión delantera y 21 cambios para las subidas.</p>
-
-                <p>Precio por hora: $15.000</p>
-            </article>
-
-            <article class="bicycle-cards">
-                <img src="./img/bicycle-gravel-aventura.jpeg" alt="Bicicleta negra">
-
-                <h2>Gravel Aventura</h2>
-
-                <p>Para rutas mixtas de asfalto y destapado.</p>
-
-                <p>Precio por hora:  $18.000</p>
-            </article>
-
-             <article class="bicycle-cards">
-                <img src="./img/bicycle-electric.jpeg" alt="Bicicleta electrica con llantas negra, color madera">
-
-                <h2>Eléctrica Urbana</h2>
-
-                <p>Asistencia eléctrica con 45 km de autonomía.</p>
-
-                <p>Precio por hora: $25.000</p>
-            </article>
-
-
-            <article class="bicycle-cards">
-                <img src="./img/bicycle-boys.jpeg" alt="">
-
-                <h2>Infantil</h2>
-
-                <p>Para niños de 6 a 10 años.</p>
-
-                <p>Precio por hora: $8.000</p>
-            </article>
-
         </section>
     </main>
 
