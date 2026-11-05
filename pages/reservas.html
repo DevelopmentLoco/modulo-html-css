@@ -30,9 +30,9 @@
     <title>Reservas Rueda Libre</title>
 </head>
 <body>
-        <header>
+    <header>
             <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm" aria-label="Navegación principal">
-                <div class="container-fluid px-3 px-lg-5">
+                <div class="container-fluid px-3 px-lg-5 d-flex justify-content-between">
                     <a class="navbar-brand d-flex align-items-center" href="../index.html" aria-label="Rueda Libre, inicio">
                         <img src="../img/logo.png" width="100" alt="Logo de Rueda Libre">
                     </a>
@@ -46,24 +46,24 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
-                    <div class="collapse navbar-collapse menu" id="menuPrincipal">
-                        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-                        <li class="nav-item"><a href="../index.html" class="nav-link">Inicio</a></li>
-                        <li class="nav-item"><a href="tarifas.html" class="nav-link">Tarifas</a></li>
-                        <li class="nav-item"><a href="tarifas.html#routes" class="nav-link">Rutas</a></li>
-                        <li class="nav-item"><a href="reservas.html" class="nav-link activo" aria-current="page">Reservas</a></li>
-                        <li class="nav-item"><a href="catalogo-bootstrap.html" class="nav-link">Catalogo</a></li>
+                    <div class="collapse navbar-collapse menu justify-content-center" id="menuPrincipal">
+                        <ul class="navbar-nav mx-auto align-items-center text-center gap-lg-2 py-2 py-lg-0">
+                        <li class="nav-item"><a href="../index.html" class="nav-link rounded-2 px-3">Inicio</a></li>
+                        <li class="nav-item"><a href="tarifas.html" class="nav-link rounded-2 px-3">Tarifas</a></li>
+                        <li class="nav-item"><a href="tarifas.html#routes" class="nav-link rounded-2 px-3">Rutas</a></li>
+                        <li class="nav-item"><a href="reservas.html" class="nav-link active rounded-2 px-3" aria-current="page">Reservas</a></li>
+                        <li class="nav-item"><a href="catalogo-bootstrap.html" class="nav-link rounded-2 px-3">Catalogo</a></li>
                         </ul>
                     </div>
                 </div>
             </nav>
         </header>
-
+        
         <main class="container py-5">
 
             <h1 class="mb-3">Reserva tu bicicleta</h1>
 
-            <a href="mailto:hola@ruedalibre.example" class="mb-3">Solicitar información de alquiler y guía</a>
+            <a href="mailto:hola@ruedalibre.example" class="btn btn-outline-success btn-sm mb-3"></a>>Solicitar información de alquiler y guía</a>
             
             <div class="row g-4">
 
@@ -161,7 +161,7 @@
                             </label>
                         </div>
                         
-                        <button type="submit">Enviar</button>
+                        <button type="submit" class="btn btn-success btn-lg">Enviar</button>
                     </form>
 
                 </section>
