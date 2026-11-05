@@ -66,17 +66,17 @@ h1, h2, h3 {
 }
 
 
-#menu a {
+.menu a {
     color: var(--title-primary-blue);
 }
 
-#menu a.activo {
+.menu a.activo {
     color: var(--btn-links-green);
     font-weight: 600;
 }
 
-#menu a:hover,
-#menu a:focus {
+.menu a:hover,
+.menu a:focus {
     background-color: var(--btn-secondary-orange);
 }
 

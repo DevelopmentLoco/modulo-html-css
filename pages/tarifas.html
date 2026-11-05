@@ -31,17 +31,30 @@
         <title>Tarifas Rueda Libre</title>
     </head>
     <body>
-        <header class="navbar">
-            <img src="../img/logo.png" width="100" alt="Logo de rueda libre">
-
-            <nav>
-                <ul id="menu">
-                    <a href="../index.html">Inicio</a>
-                    <a href="tarifas.html" class="activo">Tarifas</a>
-                    <a href="tarifas.html#routes">Rutas</a>
-                    <a href="reservas.html">Reservas</a>
-                    <a href="catalogo-bootstrap.html">Catalogo</a>
-                </ul>
+        <header>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm" aria-label="Navegación principal">
+                <div class="container-fluid px-3 px-lg-5">
+                    <a class="navbar-brand d-flex align-items-center" href="../index.html" aria-label="Rueda Libre, inicio">
+                        <img src="../img/logo.png" width="100" alt="Logo de Rueda Libre">
+                    </a>
+                    <button class="navbar-toggler" type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#menuPrincipal"
+                        aria-controls="menuPrincipal"
+                        aria-expanded="false"
+                        aria-label="Abrir o cerrar el menú de navegación">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse menu" id="menuPrincipal">
+                        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                        <li class="nav-item"><a href="../index.html" class="nav-link">Inicio</a></li>
+                        <li class="nav-item"><a href="tarifas.html" class="nav-link activo" aria-current="page">Tarifas</a></li>
+                        <li class="nav-item"><a href="tarifas.html#routes" class="nav-link">Rutas</a></li>
+                        <li class="nav-item"><a href="reservas.html" class="nav-link">Reservas</a></li>
+                        <li class="nav-item"><a href="catalogo-bootstrap.html" class="nav-link">Catalogo</a></li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
         </header>
     
