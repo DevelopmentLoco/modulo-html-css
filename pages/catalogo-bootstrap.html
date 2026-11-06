@@ -1,204 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Font Montserrat-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-        <!--Font Open Sans-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-
-        <!--Bootstrap-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
-        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-
-        <link rel="icon" href="../img/logo.png">
-        <link rel="stylesheet" href="../css/styles.css">
-
-    <title>Catalogo Rueda Libre</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!--Font Montserrat-->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<!--Font Open Sans-->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/>
+<!--Bootstrap-->
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" rel="stylesheet"/>
+<script crossorigin="anonymous" defer="" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<link href="../img/logo.png" rel="icon"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/><link href="../css/styles.css" rel="stylesheet"/>
+<title>Catalogo Rueda Libre</title>
 </head>
 <body>
-   <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm" aria-label="Navegación principal">
-            <div class="container-fluid px-3 px-lg-5 d-flex justify-content-between">
-                <a class="navbar-brand d-flex align-items-center" href="../index.html" aria-label="Rueda Libre, inicio">
-                    <img src="../img/logo.png" width="100" alt="Logo de Rueda Libre">
-                </a>
-
-                <button class="navbar-toggler" type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#menuPrincipal"
-                    aria-controls="menuPrincipal"
-                    aria-expanded="false"
-                    aria-label="Abrir o cerrar el menú de navegación">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse menu justify-content-center" id="menuPrincipal">
-                    <ul class="navbar-nav mx-auto align-items-center text-center gap-lg-2 py-2 py-lg-0">
-                    <li class="nav-item"><a href="../index.html" class="nav-link rounded-2 px-3">Inicio</a></li>
-                    <li class="nav-item"><a href="tarifas.html" class="nav-link rounded-2 px-3">Tarifas</a></li>
-                    <li class="nav-item"><a href="tarifas.html#routes" class="nav-link rounded-2 px-3">Rutas</a></li>
-                    <li class="nav-item"><a href="reservas.html" class="nav-link rounded-2 px-3">Reservas</a></li>
-                    <li class="nav-item"><a href="catalogo-bootstrap.html" class="nav-link active rounded-2 px-3" aria-current="page">Catalogo</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-
-        <section class="container py-5">
-            <div class="row g-4">
-                <div class="col-12 col-sm-2 col-lg-3 col-xl-4">
-                    <article class="card h-100 shadow-sm p-3">
-                        <img src="../img/bicycle-urban.jpeg" alt="bicicleta urbana negra con verde" width="178" class="img-fluid object-fit-cover">
-
-                        <h2>Urbana Clásica</h2>
-
-                        <p>Cómoda y liviana para las ciclorrutas.</p>
-
-                        <p>Precio por hora: $10.000</p>
-                    </article>
-                </div>
-
-                <div class="col-12 col-sm-2 col-lg-3 col-xl-4">
-                <article class="card h-100 shadow-sm p-3">
-                        <img src="../img/bicycle-pleglable.jpeg" alt="bicicleta urbana pleglable con negro y verde" width="178" class="img-fluid object-fit-cover">
-
-                        <h2>Urbana Plegable</h2>
-
-                        <p>Se dobla en segundos; ideal para combinar con el metro.</p>
-
-                        <p>Precio por hora: $12.000</p>
-                    </article>
-                </div>
-
-                <div class="col-12 col-sm-2 col-lg-3 col-xl-4">
-                    <article class="card h-100 shadow-sm p-3">
-                        <img src="../img/bicycle-mountain.jpeg" alt="Bicicleta negra para montaña" width="178" class="img-fluid object-fit-cover">
-
-                        <h2>Montaña Trail</h2>
-
-                        <p>Suspensión delantera y 21 cambios para las subidas.</p>
-
-                        <p>Precio por hora: $15.000</p>
-                    </article>
-                </div>
-
-                <div class="col-12 col-sm-2 col-lg-3 col-xl-4">
-                    <article class="card h-100 shadow-sm p-3">
-                        <img src="../img/bicycle-gravel-aventura.jpeg" alt="Bicicleta negra" width="178" class="img-fluid object-fit-cover">
-
-                        <h2>Gravel Aventura</h2>
-
-                        <p>Para rutas mixtas de asfalto y destapado.</p>
-
-                        <p>Precio por hora:  $18.000</p>
-                    </article>
-                </div>
-
-                <div class="col-12 col-sm-2 col-lg-3 col-xl-4">
-                    <article class="card h-100 shadow-sm p-3">
-                        <img src="../img/bicycle-electric.jpeg" alt="Bicicleta electrica con llantas negra, color madera" width="178" class="img-fluid object-fit-cover">
-
-                        <h2>Eléctrica Urbana</h2>
-
-                        <p>Asistencia eléctrica con 45 km de autonomía.</p>
-
-                        <p>Precio por hora: $25.000</p>
-                    </article>
-                </div>
-
-                <div class="col-12 col-sm-2 col-lg-3 col-xl-4">
-                    <article class="card h-100 shadow-sm p-3">
-                        <img src="../img/bicycle-boys.jpeg" alt="Bicicleta negra con suspension dorada" width="178" class="img-fluid object-fit-cover">
-
-                        <h2>Infantil</h2>
-
-                        <p>Para niños de 6 a 10 años.</p>
-
-                        <p>Precio por hora: $8.000</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="container card shadow-sm py-5">
-            <h2 class="text-center mb-3">¿Por qué Rueda Libre?</h2>
-
-            <div class="row g-3">
-
-                <div class="col-12 col-md-6 col-lg-3 text-start">
-                    <article>
-                        <img src="../img/icon-bicycle.webp" alt="Bicicleta negra con llantas gruesas especializadas para montaña" class="img-fluid w-25">
-
-                        <h3>Bicicletas revisadas</h3>
-                        <p>Revisión antes de cada alquiler.</p>
-                        <p class="text-success fw-bold">100% revisadas</p>
-                    </article>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-3 text-start">
-                    <article>
-                        <img src="../img/sure.png" alt="Icono de seguridad" class="img-fluid w-25">
-
-                        <h3>Casco y candado</h3>
-                        <p>Incluidos en el alquiler.</p>
-                        <p class="text-success fw-bold">Sin costo adicional</p>
-                    </article>
-                
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-3 text-start">
-
-                    <article>
-                        <img src="../img/certificate.png" alt="Icono de certificado" class="img-fluid w-25">
-
-                        <h3>Guías certificados</h3>
-                        <p>Personal capacitado para acompañarte.</p>
-                        <p class="text-success fw-bold">Guías certificados</p>
-                    </article>
-                
-                </div>
-                
-                <div class="col-12 col-md-6 col-lg-3 text-start">
-                    <article>
-                        <img src="../img/ubication.png" alt="Icono de ubicación rojo con verde" class="img-fluid w-25">
-
-                        <h3>Puntos de devolución</h3>
-                        <p>Disponibilidad en tres sedes.</p>
-                        <p class="text-success fw-bold">3 sedes</p>
-                    </article>
-
-                </div>
-            </div>
-
-        </section>
-
-
-        <section class="text-center my-5 card py-3 shadow-sm">
-            <div class="d-flex flex-column flex-md-row justify-content-around align-items-center">
-                <div>
-                    <h2>¿Listo para rodar?</h2>
-                    <p>Reserva tu bicicleta y disfruta de una nueva aventura.</p>
-                </div>
-            
-                <div>
-                    <a href="reservas.html" class="d-inline-block text-decoration-none bg-success text-white px-2 py-3 rounded-3 border border-primary border-2">Reservar ahora</a>
-
-                    <img src="../img/cyclist.png" alt="Ciclista con uniforme azul y una bicicleta azul con blanco" class="img-fluid w-25 d-none d-md-inline-block">
-                </div>
-            </div>
-        </section>
-
-    </main>
-</body>
+<header>
+<nav aria-label="Navegación principal" class="navbar navbar-expand-lg bg-body-tertiary shadow-sm">
+<div class="container-fluid px-3 px-lg-5 d-flex justify-content-between">
+<a aria-label="Rueda Libre, inicio" class="navbar-brand d-flex align-items-center" href="../index.html">
+<img alt="Logo de Rueda Libre" src="../img/logo.png" width="100"/>
+</a>
+<button aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir o cerrar el menú de navegación" class="navbar-toggler" data-bs-target="#menuPrincipal" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse menu justify-content-center" id="menuPrincipal">
+<ul class="navbar-nav mx-auto align-items-center text-center gap-lg-2 py-2 py-lg-0">
+<li class="nav-item"><a class="nav-link rounded-2 px-3" href="../index.html"><i aria-hidden="true" class="bi bi-house-door me-1"></i> Inicio</a></li>
+<li class="nav-item"><a class="nav-link rounded-2 px-3" href="tarifas.html"><i aria-hidden="true" class="bi bi-tags me-1"></i> Tarifas</a></li>
+<li class="nav-item"><a class="nav-link rounded-2 px-3" href="tarifas.html#routes"><i aria-hidden="true" class="bi bi-signpost-split me-1"></i> Rutas</a></li>
+<li class="nav-item"><a class="nav-link rounded-2 px-3" href="reservas.html"><i aria-hidden="true" class="bi bi-calendar-check me-1"></i> Reservas</a></li>
+<li class="nav-item"><a aria-current="page" class="nav-link active rounded-2 px-3" href="catalogo-bootstrap.html"><i aria-hidden="true" class="bi bi-bicycle me-1"></i> Catalogo</a></li>
+</ul>
+</div>
+</div>
+</nav>
+</header>
+<main>
+<section class="container py-5">
+<div class="row g-4">
+<div class="col-12 col-xl-4 col-sm-6 col-lg-4">
+<article class="card h-100 shadow-sm p-3">
+<img alt="bicicleta urbana negra con verde" class="img-fluid object-fit-cover" src="../img/bicycle-urban.jpeg" width="178"/>
+<h2 class="titulo-seccion">Urbana Clásica</h2>
+<p>Cómoda y liviana para las ciclorrutas.</p>
+<p>Precio por hora: $10.000</p>
+</article>
+</div>
+<div class="col-12 col-xl-4 col-sm-6 col-lg-4">
+<article class="card h-100 shadow-sm p-3">
+<img alt="bicicleta urbana pleglable con negro y verde" class="img-fluid object-fit-cover" src="../img/bicycle-pleglable.jpeg" width="178"/>
+<h2 class="titulo-seccion">Urbana Plegable</h2>
+<p>Se dobla en segundos; ideal para combinar con el metro.</p>
+<p>Precio por hora: $12.000</p>
+</article>
+</div>
+<div class="col-12 col-xl-4 col-sm-6 col-lg-4">
+<article class="card h-100 shadow-sm p-3">
+<img alt="Bicicleta negra para montaña" class="img-fluid object-fit-cover" src="../img/bicycle-mountain.jpeg" width="178"/>
+<h2 class="titulo-seccion">Montaña Trail</h2>
+<p>Suspensión delantera y 21 cambios para las subidas.</p>
+<p>Precio por hora: $15.000</p>
+</article>
+</div>
+<div class="col-12 col-xl-4 col-sm-6 col-lg-4">
+<article class="card h-100 shadow-sm p-3">
+<img alt="Bicicleta negra" class="img-fluid object-fit-cover" src="../img/bicycle-gravel-aventura.jpeg" width="178"/>
+<h2 class="titulo-seccion">Gravel Aventura</h2>
+<p>Para rutas mixtas de asfalto y destapado.</p>
+<p>Precio por hora:  $18.000</p>
+</article>
+</div>
+<div class="col-12 col-xl-4 col-sm-6 col-lg-4">
+<article class="card h-100 shadow-sm p-3">
+<img alt="Bicicleta electrica con llantas negra, color madera" class="img-fluid object-fit-cover" src="../img/bicycle-electric.jpeg" width="178"/>
+<h2 class="titulo-seccion">Eléctrica Urbana</h2>
+<p>Asistencia eléctrica con 45 km de autonomía.</p>
+<p>Precio por hora: $25.000</p>
+</article>
+</div>
+<div class="col-12 col-xl-4 col-sm-6 col-lg-4">
+<article class="card h-100 shadow-sm p-3">
+<img alt="Bicicleta negra con suspension dorada" class="img-fluid object-fit-cover" src="../img/bicycle-boys.jpeg" width="178"/>
+<h2 class="titulo-seccion">Infantil</h2>
+<p>Para niños de 6 a 10 años.</p>
+<p>Precio por hora: $8.000</p>
+</article>
+</div>
+</div>
+</section>
+<section class="container card shadow-sm py-5">
+<h2 class="text-center mb-3 titulo-seccion">¿Por qué Rueda Libre?</h2>
+<div class="row g-3">
+<div class="col-12 col-md-6 col-lg-3 text-start">
+<article>
+<img alt="Bicicleta negra con llantas gruesas especializadas para montaña" class="img-fluid w-25" src="../img/icon-bicycle.webp"/>
+<h3><i aria-hidden="true" class="bi bi-bicycle me-2"></i> Bicicletas revisadas</h3>
+<p>Revisión antes de cada alquiler.</p>
+<p class="text-success fw-bold">100% revisadas</p>
+</article>
+</div>
+<div class="col-12 col-md-6 col-lg-3 text-start">
+<article>
+<img alt="Icono de seguridad" class="img-fluid w-25" src="../img/sure.png"/>
+<h3><i aria-hidden="true" class="bi bi-shield-check me-2"></i> Casco y candado</h3>
+<p>Incluidos en el alquiler.</p>
+<p class="text-success fw-bold">Sin costo adicional</p>
+</article>
+</div>
+<div class="col-12 col-md-6 col-lg-3 text-start">
+<article>
+<img alt="Icono de certificado" class="img-fluid w-25" src="../img/certificate.png"/>
+<h3><i aria-hidden="true" class="bi bi-award me-2"></i> Guías certificados</h3>
+<p>Personal capacitado para acompañarte.</p>
+<p class="text-success fw-bold">Guías certificados</p>
+</article>
+</div>
+<div class="col-12 col-md-6 col-lg-3 text-start">
+<article>
+<img alt="Icono de ubicación rojo con verde" class="img-fluid w-25" src="../img/ubication.png"/>
+<h3><i aria-hidden="true" class="bi bi-geo-alt me-2"></i> Puntos de devolución</h3>
+<p>Disponibilidad en tres sedes.</p>
+<p class="text-success fw-bold">3 sedes</p>
+</article>
+</div>
+</div>
+</section>
+<section class="text-center my-5 card py-3 shadow-sm">
+<div class="d-flex flex-column flex-md-row justify-content-around align-items-center">
+<div>
+<h2 class="titulo-seccion">¿Listo para rodar?</h2>
+<p>Reserva tu bicicleta y disfruta de una nueva aventura.</p>
+</div>
+<div>
+<a class="btn btn-naranja-pedal btn-lg" href="reservas.html">Reservar ahora</a>
+<img alt="Ciclista con uniforme azul y una bicicleta azul con blanco" class="img-fluid w-25 d-none d-md-inline-block" src="../img/cyclist.png"/>
+</div>
+</div>
+</section>
+</main>
+<footer class="pie-marca"><div class="container py-3"><p>Rueda Libre</p><p><i aria-hidden="true" class="bi bi-envelope-fill me-2"></i>Contacto: <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a></p><p class="mb-0"><small>© 2026 Rueda Libre. Todos los derechos reservados</small></p></div></footer><a aria-label="Contactar a Rueda Libre por WhatsApp" class="whatsapp" href="https://wa.me/573000000000" rel="noopener" target="_blank"><i aria-hidden="true" class="bi bi-whatsapp"></i> WhatsApp</a></body>
 </html>

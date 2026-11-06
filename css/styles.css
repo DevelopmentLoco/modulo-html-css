@@ -1,206 +1,73 @@
-/* 
-Identidad visual compartida: colores y tipografías de marca 
-*/
+/* Identidad de marca Rueda Libre: Bootstrap se personaliza desde su cascada. */
 :root {
     --bg-primary-cream: #FAF6EF;
     --title-primary-blue: #14213D;
     --bordes-grey: #5B6470;
     --btn-links-green: #1E7A4F;
     --btn-secondary-orange: #F39A2B;
-
+    --bs-primary: #1E7A4F;
+    --bs-primary-rgb: 30, 122, 79;
+    --bs-success: #1E7A4F;
+    --bs-success-rgb: 30, 122, 79;
+    --bs-link-color: #1E7A4F;
+    --bs-link-hover-color: #145638;
+    --bs-body-font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    --bs-body-color: #14213D;
+    --bs-body-bg: #FAF6EF;
+    --bs-border-radius: .5rem;
+    --bs-border-color: #5B6470;
     --font-heading: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
     --font-body: 'Open Sans', Arial, Helvetica, sans-serif;
-
-    --spacing-sm: 0.5rem;
+    --spacing-sm: .5rem;
     --spacing-md: 1rem;
     --spacing-lg: 1.25rem;
     --spacing-xxl: 2rem;
+}
+body { background-color: var(--bs-body-bg); color: var(--bs-body-color); font-family: var(--bs-body-font-family); }
+h1, h2, h3, h4, h5, h6 { color: var(--title-primary-blue); font-family: var(--font-heading); }
+a { color: var(--bs-link-color); }
+a:hover, a:focus-visible { color: var(--bs-link-hover-color); }
 
-    --img-cards: 8rem;
+/* Botón Verde Ruta y variante Naranja Pedal. */
+.btn-primary, .btn-success {
+    --bs-btn-color: #fff; --bs-btn-bg: #1E7A4F; --bs-btn-border-color: #1E7A4F;
+    --bs-btn-hover-color: #fff; --bs-btn-hover-bg: #176440; --bs-btn-hover-border-color: #176440;
+    --bs-btn-active-color: #fff; --bs-btn-active-bg: #124D31; --bs-btn-active-border-color: #124D31;
+    --bs-btn-disabled-color: #fff; --bs-btn-disabled-bg: #1E7A4F; --bs-btn-disabled-border-color: #1E7A4F;
+}
+.btn-outline-success {
+    --bs-btn-color: #176440; --bs-btn-border-color: #176440;
+    --bs-btn-hover-color: #fff; --bs-btn-hover-bg: #176440; --bs-btn-hover-border-color: #176440;
+    --bs-btn-active-bg: #124D31; --bs-btn-active-border-color: #124D31;
+}
+.btn-naranja-pedal {
+    --bs-btn-color: #14213D; --bs-btn-bg: #F39A2B; --bs-btn-border-color: #F39A2B;
+    --bs-btn-hover-color: #14213D; --bs-btn-hover-bg: #E48717; --bs-btn-hover-border-color: #E48717;
+    --bs-btn-active-color: #14213D; --bs-btn-active-bg: #D9780D; --bs-btn-active-border-color: #D9780D;
 }
 
-/*
-   Estilos base compartidos
-*/
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background-color: var(--bg-primary-cream);
-    font-family: var(--font-body);
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    overflow: scroll;
-}
-
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: var(--spacing-md);
-}
-
-nav ul {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: var(--spacing-md);
-}
-
-
-main {
-    max-width: 65rem;
-    margin: 0 auto;
-    padding: 0 var(--spacing-md);
-}
-
-h1, h2, h3 {
-    color: var(--title-primary-blue);
-    font-family: var(--font-heading);
-}
-
-
-.menu a {
-    color: var(--title-primary-blue);
-}
-
-.menu a.activo {
-    color: var(--btn-links-green);
-    font-weight: 600;
-}
-
-.menu a:hover,
-.menu a:focus {
-    background-color: var(--btn-secondary-orange);
-}
-
-.action,
-button {
-    display: inline-block;
-    text-decoration: none;
-    background-color: var(--btn-secondary-orange);
-    padding: var(--spacing-sm) var(--spacing-lg);
-    color: var(--title-primary-blue);
-    border: none;
-    border-radius: var(--spacing-sm);
-}
-
-.servicio-card {
-    position: relative; /* la etiqueta "Nuevo" se ancla a esta tarjeta */
-    padding: var(--spacing-lg);
-    border: 1px solid var(--bordes-grey);
-    border-radius: var(--spacing-sm);
-    margin-bottom: var(--spacing-xxl);
-    background-color: #ffffff;
-}
-
-
-.etiqueta {
-    position: absolute;
-    top: var(--spacing-sm);
-    right: var(--spacing-sm);
-    background-color: var(--btn-secondary-orange);
-    color: var(--title-primary-blue);
-    font-weight: 600;
-    padding: 0.25rem var(--spacing-sm);
-    border-radius: var(--spacing-sm);
-}
-
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: var(--spacing-xxl);
-}
-
-th, td {
-    padding: var(--spacing-md);
-    border: 1px solid var(--bordes-grey);
-    text-align: left;
-}
-
-th {
-    background-color: var(--title-primary-blue);
-    color: #ffffff;
-}
-
-.whatsapp {
-    position: fixed;
-    bottom: var(--spacing-md);
-    right: var(--spacing-md);
-    background-color: var(--btn-links-green);
-    color: #ffffff;
-    text-decoration: none;
-    padding: var(--spacing-sm) var(--spacing-lg);
-    border-radius: var(--spacing-sm);
-}
-
-.whatsapp:hover,
-.whatsapp:focus {
-    outline: 3px solid var(--title-primary-blue);
-}
-
-/* Pie de página de las páginas que todavía usan la maquetación anterior */
-footer {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--title-primary-blue);
-    color: var(--bg-primary-cream);
-    margin-top: var(--spacing-xxl);
-    padding: var(--spacing-xxl) var(--spacing-md) 5rem var(--spacing-md);
-    border-top: 2px solid var(--btn-secondary-orange);
-}
-
-
-/*
-   Formularios: tarifas y reservas,
-   estas reglas se conservan porque esas páginas las necesitan.
- */
-form {
-    margin-bottom: var(--spacing-xxl);
-}
-
-label {
-    display: block;
-    margin-bottom: var(--spacing-sm);
-    color: var(--title-primary-blue);
-    font-weight: 600;
-}
-
-input:focus,
-textarea:focus {
-    outline: none;
-    border-color: var(--btn-links-green);
-    box-shadow: 0 4px 3px var(--btn-links-green);
-}
-
-input[type="radio"]:focus,
-input[type="checkbox"]:focus {
-    outline: 2px solid var(--btn-links-green);
-    outline-offset: 3px;
-}
-
-.image-port {
-    max-width: 20rem;
-    height: auto;
-    object-fit: cover;
-}
-
-@media (max-width: 480px) {
-  .img-service {
-    width: 15rem;
-    height: auto;
-  }
-  .rent li{
-    margin: var(--spacing-sm);
-  }
-  .mettings li {
-    margin: var(--spacing-sm);
-  }
-}
+/* Clases propias complementarias a Bootstrap. */
+.portada-marca { background: linear-gradient(120deg, #FAF6EF 0%, #F1E7D8 100%); border-radius: 1rem; }
+.titulo-seccion { display: inline-block; padding-bottom: .45rem; border-bottom: 3px solid #F39A2B; margin-bottom: 1.25rem; }
+.pie-marca { background: #14213D; color: #FAF6EF; border-top: 4px solid #F39A2B; }
+.pie-marca a { color: #F8C77F; }
+.pie-marca a:hover, .pie-marca a:focus-visible { color: #fff; }
+.menu .nav-link { color: #14213D; position: relative; transition: color .2s ease, background-color .2s ease; padding-bottom: .65rem; }
+.menu .nav-link:hover, .menu .nav-link:focus-visible { color: #14213D; background-color: #F39A2B; }
+.menu .nav-link.active { color: #145638; font-weight: 700; }
+.menu .nav-link.active::after { content: ""; position: absolute; left: .75rem; right: .75rem; bottom: .15rem; height: 3px; border-radius: 3px; background: #1E7A4F; }
+.servicio-card { position: relative; padding: var(--spacing-lg); border: 1px solid var(--bordes-grey); border-radius: var(--bs-border-radius); margin-bottom: var(--spacing-xxl); background-color: #fff; }
+.etiqueta { position: absolute; top: var(--spacing-sm); right: var(--spacing-sm); background-color: var(--btn-secondary-orange); color: var(--title-primary-blue); font-weight: 700; padding: .25rem var(--spacing-sm); border-radius: var(--bs-border-radius); }
+table { width: 100%; border-collapse: collapse; margin-bottom: var(--spacing-xxl); }
+th, td { padding: var(--spacing-md); border: 1px solid var(--bordes-grey); text-align: left; }
+th { background-color: var(--title-primary-blue); color: #fff; }
+.whatsapp { position: fixed; z-index: 1030; right: 1rem; bottom: 1rem; display: inline-flex; align-items: center; gap: .45rem; background: #1E7A4F; color: #fff; text-decoration: none; padding: .75rem 1rem; border-radius: 2rem; box-shadow: 0 .25rem .75rem #14213D40; }
+.whatsapp:hover, .whatsapp:focus-visible { background: #145638; color: #fff; outline: 3px solid #14213D; outline-offset: 3px; }
+footer { display: block; margin-top: var(--spacing-xxl); padding: var(--spacing-xxl) var(--spacing-md) 5rem; }
+form { margin-bottom: var(--spacing-xxl); }
+label { display: block; margin-bottom: var(--spacing-sm); color: var(--title-primary-blue); font-weight: 600; }
+input:focus, textarea:focus { border-color: #1E7A4F; box-shadow: 0 0 0 .2rem #1E7A4F30; }
+input[type="radio"]:focus, input[type="checkbox"]:focus { outline: 2px solid #1E7A4F; outline-offset: 3px; }
+.image-port { max-width: 20rem; height: auto; object-fit: cover; }
+@media (max-width: 991.98px) { .menu .nav-link.active::after { left: 35%; right: 35%; } }
+@media (max-width: 480px) { .img-service { width: 15rem; height: auto; } .rent li, .mettings li { margin: var(--spacing-sm); } .whatsapp { right: .75rem; bottom: .75rem; } }

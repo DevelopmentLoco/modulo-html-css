@@ -261,3 +261,39 @@ Reutilización de clases en diferentes páginas.
 
 
 
+
+Semana 2 - Día 4: Personalización de marca y lanzamiento v2.0
+
+Identidad visual aplicada
+- Se conservaron los colores definidos en la paleta: Crema #FAF6EF, Azul Noche #14213D, Gris Asfalto #5B6470, Verde Ruta #1E7A4F y Naranja Pedal #F39A2B.
+- En css/styles.css se sobrescribieron variables globales de Bootstrap: --bs-primary, --bs-primary-rgb, --bs-success, --bs-success-rgb, --bs-body-font-family, --bs-body-color, --bs-body-bg, --bs-link-color, --bs-link-hover-color y --bs-border-radius.
+- Se personalizaron las variables --bs-btn-* para Verde Ruta en botones principales, hover y active. Se creó .btn-naranja-pedal con texto Azul Noche para mantener contraste.
+- Se agregaron las clases propias .portada-marca, .titulo-seccion y .pie-marca. Se mantuvieron las clases de Bootstrap sin editar sus archivos.
+- Se agregó Bootstrap Icons 1.11.3 por CDN. Hay iconos en la navegación, beneficios, contacto y WhatsApp. Los decorativos usan aria-hidden="true" y WhatsApp tiene aria-label.
+- El enlace activo de la navbar muestra una línea verde debajo del nombre de la página.
+
+Comparativa antes / después
+- Antes: Bootstrap mostraba su azul predeterminado y no había una identidad visual consistente entre enlaces, utilidades, botones y secciones.
+- Después: primary y success usan Verde Ruta; enlaces, tipografía y fondos usan la paleta de Rueda Libre; el CTA secundario usa Naranja Pedal con texto Azul Noche; el pie y los títulos tienen estilos propios.
+- Evidencias: img/capturas/antes-personalizacion.png e img/capturas/despues-personalizacion.png.
+
+Conflictos y correcciones realizadas
+- Se mantuvo Bootstrap 5.3.8 sin modificar sus archivos y styles.css continúa después de Bootstrap.
+- Se detectó y corrigió la clase de gutter mal escrita "-g4" por "g-4" en tarifas.
+- Se ajustaron las columnas de tarjetas para que usen anchos responsivos de Bootstrap.
+- Se evitó un reset global que eliminaba márgenes y paddings de componentes Bootstrap.
+- El bundle de Bootstrap se conserva una sola vez por página.
+- Se completó el pie y el acceso WhatsApp de catálogo para mantener consistencia con las demás páginas.
+
+Pruebas de cierre
+- Inspección estática: variables --bs-* y --bs-btn-* presentes; no hay !important en css/styles.css; los archivos de Bootstrap no se modificaron.
+- Accesibilidad de iconos: los iconos decorativos llevan aria-hidden="true"; el acceso flotante de WhatsApp tiene aria-label.
+- Navegación: cada página conserva aria-current="page" en su enlace activo y el CSS dibuja la línea inferior.
+- Responsive: las grillas usan container > row > col y clases de columnas para móvil, tablet y escritorio.
+- Pendiente de validación manual en navegador: recorrer 360 px, 768 px y 1440 px; probar Tab/Shift+Tab y Enter; verificar contraste visual y ausencia de errores en DevTools/Network.
+- No se pudo confirmar la publicación en GitHub Pages desde este entorno. Después de subir el commit, activar Settings > Pages > Deploy from a branch, rama principal y carpeta /(root), y comprobar la URL.
+
+Cierre y publicación
+- Versión preparada: Rueda Libre v2.0.
+- Commit de lanzamiento: feat: personaliza identidad visual y publica Rueda Libre v2.0
+- URL de GitHub Pages: pendiente de activar/verificar en GitHub.
