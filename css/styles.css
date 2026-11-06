@@ -56,7 +56,25 @@ a:hover, a:focus-visible { color: var(--bs-link-hover-color); }
 .menu .nav-link:hover, .menu .nav-link:focus-visible { color: #14213D; background-color: #F39A2B; }
 .menu .nav-link.active { color: #145638; font-weight: 700; }
 .menu .nav-link.active::after { content: ""; position: absolute; left: .75rem; right: .75rem; bottom: .15rem; height: 3px; border-radius: 3px; background: #1E7A4F; }
-.servicio-card { position: relative; padding: var(--spacing-lg); border: 1px solid var(--bordes-grey); border-radius: var(--bs-border-radius); margin-bottom: var(--spacing-xxl); background-color: #fff; }
+.servicio-card {
+    position: relative;
+    width: calc(100% - 2rem);
+    max-width: 960px;
+    margin: 0 auto var(--spacing-xxl);
+    padding: var(--spacing-lg);
+    border: 1px solid var(--bordes-grey);
+    border-radius: var(--bs-border-radius);
+    background-color: #fff;
+}
+.img-service {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--bs-border-radius);
+}
+.servicio-card figure {
+    margin: var(--spacing-md) 0;
+}
 .etiqueta { position: absolute; top: var(--spacing-sm); right: var(--spacing-sm); background-color: var(--btn-secondary-orange); color: var(--title-primary-blue); font-weight: 700; padding: .25rem var(--spacing-sm); border-radius: var(--bs-border-radius); }
 table { width: 100%; border-collapse: collapse; margin-bottom: var(--spacing-xxl); }
 th, td { padding: var(--spacing-md); border: 1px solid var(--bordes-grey); text-align: left; }
@@ -70,4 +88,4 @@ input:focus, textarea:focus { border-color: #1E7A4F; box-shadow: 0 0 0 .2rem #1E
 input[type="radio"]:focus, input[type="checkbox"]:focus { outline: 2px solid #1E7A4F; outline-offset: 3px; }
 .image-port { max-width: 20rem; height: auto; object-fit: cover; }
 @media (max-width: 991.98px) { .menu .nav-link.active::after { left: 35%; right: 35%; } }
-@media (max-width: 480px) { .img-service { width: 15rem; height: auto; } .rent li, .mettings li { margin: var(--spacing-sm); } .whatsapp { right: .75rem; bottom: .75rem; } }
+@media (max-width: 480px) { .servicio-card { padding: 1rem; } .rent li, .mettings li { margin: var(--spacing-sm); } .whatsapp { right: .75rem; bottom: .75rem; } }
