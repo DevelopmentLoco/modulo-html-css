@@ -297,3 +297,34 @@ Cierre y publicación
 - Versión preparada: Rueda Libre v2.0.
 - Commit de lanzamiento: feat: personaliza identidad visual y publica Rueda Libre v2.0
 - URL de GitHub Pages: pendiente de activar/verificar en GitHub.
+
+
+Semana 3 - Tailwind CSS: prototipo de campaña Rueda Nocturna
+
+Construcción de la sección
+- Creé la carpeta nocturna/ y el archivo nocturna/prototipo.html.
+- Agregué el Play CDN de Tailwind CSS en el head.
+- Construí la sección principal de la campaña con la etiqueta "Nuevo · Jueves a sábado", el título "Rueda Nocturna", el subtítulo "Descubre Medellín en bici cuando se encienden las luces", los datos destacados "3 rutas" y "Desde $55.000", y el enlace "Inscríbete".
+- Incorporé una imagen de una persona recorriendo la ciudad de noche en una bicicleta deportiva.
+- Utilicé utilidades de Tailwind para espaciado, tamaños, colores y tipografía. Organicé el diseño en dos columnas para escritorio y en una columna para pantallas pequeñas.
+- El documento tiene un solo h1. No utiliza etiquetas style, atributos style="" ni clases de Bootstrap.
+
+Comparación del botón: Bootstrap y Tailwind
+- Semana 2 con Bootstrap: construí el botón con las clases predefinidas `btn`, `btn-naranja-pedal` y `btn-lg`. Bootstrap aporta una estructura visual de botón ya preparada y se puede personalizar mediante variables y CSS.
+- Hoy con Tailwind: construí el enlace "Inscríbete" combinando utilidades como `inline-flex`, `items-center`, `justify-center`, `rounded-full`, `bg-[#e4b86b]`, `px-8`, `py-4`, `text-sm` y `font-extrabold`.
+- Diferencia clave: Bootstrap se enfoca principalmente en componentes y patrones visuales predefinidos; Tailwind utiliza el enfoque utility-first, que permite construir cada elemento combinando clases pequeñas que controlan directamente su espaciado, tamaño, color y tipografía.
+
+Ajustes adicionales en el proyecto
+- Centré horizontalmente el bloque "Cómo alquilar" mediante `margin: 0 auto` y un ancho máximo, y limité el ancho de sus listas para que el texto no quede pegado al borde izquierdo.
+- Centré el grupo de botones de la portada y también el botón "Reservar ahora" que aparece debajo del bloque "Cómo alquilar".
+- Estos ajustes adicionales se hicieron en index.html y css/styles.css; el prototipo de Tailwind mantiene sus estilos únicamente con utilidades.
+
+Verificación técnica
+- `nocturna/prototipo.html` carga el Play CDN de Tailwind CSS.
+- El prototipo contiene un único h1 y todos los textos y datos solicitados en el contexto.
+- Se utilizan las cuatro familias requeridas: espaciado, tamaños, colores y tipografía.
+- El botón "Inscríbete" es un enlace con apariencia de botón creado con utilidades de Tailwind.
+
+Pendiente antes de publicar
+- Abrir `nocturna/prototipo.html` en el navegador con conexión a internet y comprobar su visualización en móvil y escritorio.
+- Revisar `git status`, crear el commit y ejecutar `git push` desde el equipo local. El push no se ejecutó desde este entorno porque no hay una sesión autenticada del repositorio remoto.
