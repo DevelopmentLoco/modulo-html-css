@@ -328,3 +328,15 @@ Verificación técnica
 Pendiente antes de publicar
 - Abrir `nocturna/prototipo.html` en el navegador con conexión a internet y comprobar su visualización en móvil y escritorio.
 - Revisar `git status`, crear el commit y ejecutar `git push` desde el equipo local. El push no se ejecutó desde este entorno porque no hay una sesión autenticada del repositorio remoto.
+
+
+### Bitácora – Generación de clases con Tailwind CLI
+
+Durante la actividad se comprobó cómo Tailwind CSS CLI genera automáticamente las clases utilizadas en el proyecto.
+
+- **Clase utilizada:** `bg-indigo-600`. Se encontró en el archivo `output.css` porque está siendo utilizada en los botones del archivo `index.html`.
+- **Clase no utilizada:** `bg-pink-500`. No se encontró en `output.css` porque no está siendo utilizada en el código del proyecto.
+
+**Conclusión:**
+
+Tailwind CSS analiza los archivos del proyecto para identificar las clases utilizadas y generar únicamente los estilos correspondientes. Esto permite evitar CSS innecesario y mantener un archivo de estilos optimizado.
