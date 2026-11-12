@@ -364,3 +364,37 @@ Verificación técnica
 - Tiempo real empleado: ______ minutos (completar con el tiempo medido en el cronómetro).
 - Pendientes: completar el tiempo real y las pruebas manuales en navegador.
 
+
+
+Semana 3 - Kit de componentes Rueda Nocturna
+
+Página creada
+- Se creó nocturna/componentes.html y se enlazó output.css desde la ruta relativa ./src/output.css.
+- La página reúne las tres variantes de botón (principal, secundario y contorno), la card Pareja del MiniReto 3, tres alertas y dos campos de formulario.
+- La card conserva los datos del prototipo: Pareja, $99.000 por las dos personas, foto del recorrido, snack para dos y prioridad en la ruta.
+- Las alertas usan fondos suaves y borde lateral de color. La alerta de éxito usa role="status" y aria-live="polite" para anunciar el mensaje sin interrumpir la lectura.
+- Los campos Correo electrónico y Celular tienen label asociado mediante for/id, placeholder, texto de ayuda asociado con aria-describedby y estilos hover/focus.
+- Se mantuvieron los colores de la identidad visual de Rueda Nocturna: fondo #101b24, superficies #14232c / #192832 / #263943, texto #f7f4ec, texto secundario #c4d0ca / #aabbb3, borde #354650 y acento dorado #e4b86b.
+
+Comparación de enfoques
+- Play CDN: práctico para prototipos y pruebas rápidas en navegador, pero depende de cargar Tailwind desde un CDN y no es la opción de publicación de producción.
+- Tailwind CLI: analiza los archivos HTML del proyecto y genera en src/output.css únicamente las utilidades detectadas; permite publicar una hoja CSS local y controlada.
+- Decisión: conservar Tailwind CLI y enlazar ./src/output.css en componentes.html, igual que en index.html.
+
+Verificación de generación de clases
+- Se revisó que las clases usadas en componentes.html estén escritas completas en el HTML y que las utilidades necesarias estén presentes en src/output.css.
+- El entorno de preparación no permitió completar npm install ni ejecutar Tailwind CLI; por eso se conservaron las utilidades ya compiladas y se añadieron al output.css las reglas de las clases nuevas que faltaban. No se registra como una compilación CLI ejecutada.
+- Para regenerar el archivo con la CLI en el proyecto local: npm install y luego npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css
+- Verificación pendiente en navegador: DevTools > Network debe mostrar src/output.css con estado 200 y sin errores 404; comprobar también que las imágenes carguen y que no haya errores de consola.
+
+Reglas del kit
+- Colores: fondo general #101b24; superficies #14232c, #192832 y #263943; texto principal #f7f4ec; texto secundario #c4d0ca / #aabbb3; bordes #354650 / #52636a; acento y botón principal #e4b86b con hover #f0ca8a. Se usan tonos verdes y amarillos suaves únicamente para los estados de alerta.
+- Radios: rounded-full para botones y etiquetas tipo píldora; rounded-2xl para tarjetas, alertas, paneles y campos.
+- Espaciado: escala Tailwind basada en múltiplos de 4 px (p-4 = 16 px, p-5 = 20 px, p-6 = 24 px; gap-2 = 8 px, gap-4 = 16 px, gap-6 = 24 px; mb-2 = 8 px, mb-6 = 24 px, mb-12 = 48 px). Se reutiliza la escala, sin valores arbitrarios.
+- Tipografía: Montserrat; títulos font-extrabold/font-black; etiquetas font-bold; texto de lectura text-sm/text-base con leading-6/leading-7.
+- Bordes y sombras: border con #354650 como base; border-2 para destacar la card Pareja; shadow-lg en superficies elevadas y shadow-xl para la card destacada.
+- Interacción y accesibilidad: hover para cambio de color/sombra; focus con outline visible y offset; todos los enlaces son alcanzables con Tab; inputs tienen foco visible; labels enlazadas a sus campos; alerta de éxito anunciada mediante role="status".
+
+Publicación
+- Archivo de entrega: nocturna/componentes.html.
+- URL de GitHub Pages: completar después de publicar el commit en el repositorio remoto. No se inventa una URL antes de verificarla.
