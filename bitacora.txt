@@ -340,3 +340,27 @@ Durante la actividad se comprobó cómo Tailwind CSS CLI genera automáticamente
 **Conclusión:**
 
 Tailwind CSS analiza los archivos del proyecto para identificar las clases utilizadas y generar únicamente los estilos correspondientes. Esto permite evitar CSS innecesario y mantener un archivo de estilos optimizado.
+
+Semana 3 – Tailwind CSS: sección Planes Rueda Nocturna
+
+Implementación de la sección
+- Organicé los planes Individual, Pareja y Grupo (4 a 8) en una cuadrícula `grid grid-cols-1 lg:grid-cols-3`, con separación uniforme mediante `gap-7`.
+- Cada tarjeta usa `flex h-full flex-col` y un contenedor interno `flex flex-1 flex-col p-6`. Así las tres tarjetas mantienen el mismo relleno y ocupan la misma altura dentro de la fila.
+- Añadí fotografías locales del proyecto: `bicycle-pleglable.jpeg` para Individual, `bicycle-gravel-aventura.jpeg` para Pareja y `group-bicycle.jpeg` para Grupo. Las tres imágenes usan la misma altura (`h-48`), ancho completo y `object-cover`.
+- El plan Pareja se destaca con borde dorado de 2 px, fondo diferente y la etiqueta visible “Más elegido”. Las otras tarjetas reservan el mismo espacio para esa etiqueta con `min-h-8` e `invisible`, evitando que el contenido se desplace.
+- Los tres botones usan `mt-auto` y `min-h-12` para quedar alineados al final de las tarjetas.
+- Las listas de beneficios se organizaron con `flex flex-col gap-3`; se conservaron los precios y beneficios indicados en el requerimiento.
+- Se igualó el grosor del borde (`border-2`) y el relleno (`p-6`) en las tres tarjetas para facilitar la comparación del box model en DevTools.
+
+Modo oscuro y accesibilidad
+- Se activó la clase `dark` en el body y se definió `@custom-variant dark (&:where(.dark, .dark *));` en `nocturna/src/input.css` para que Tailwind 4 aplique las variantes `dark:` por clase.
+- Se mantuvieron fondos oscuros, texto claro y acento dorado para conservar el contraste de la campaña.
+- Las imágenes tienen texto alternativo y carga diferida (`loading="lazy"`); los símbolos decorativos se ocultan a lectores de pantalla.
+
+Verificación técnica
+- Se regeneró `nocturna/src/output.css` con Tailwind CLI 4.3.5.
+- Las rutas de las tres imágenes y los enlaces a `../pages/reservas.html` se comprobaron contra la estructura del proyecto.
+- Pendiente de validación manual en navegador: comprobar en DevTools > Computed que las tres tarjetas tienen el mismo ancho y `padding: 24px`; revisar alturas y alineación de botones en escritorio; probar 360 px, 768 px y 1440 px; verificar contraste, foco de teclado y ausencia de scroll horizontal.
+- Tiempo real empleado: ______ minutos (completar con el tiempo medido en el cronómetro).
+- Pendientes: completar el tiempo real y las pruebas manuales en navegador.
+

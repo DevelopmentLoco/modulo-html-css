@@ -1,102 +1,623 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-            <meta charset="utf-8"/>
-            <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-            <meta content=" Alquila bicicletas y organiza recorridos guiados por la ciudad." name="description"/>
-            <meta content="Juan Pablo Rodriguez" name="author"/>
-            <meta content="index, follow" name="index"/>
-            <meta content="strict-origin-when-cross-origin" name="referrer"/>
-            <!--Font Montserrat-->
-            <link href="https://fonts.googleapis.com" rel="preconnect"/>
-            <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-            <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
-            <!--Font Open Sans-->
-            <link href="https://fonts.googleapis.com" rel="preconnect"/>
-            <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-            <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/>
 
-            <link rel="stylesheet" href="src/output.css">
-            
-            <title>Rueda Nocturna</title>
-    </head>
-    <body class="min-h-screen bg-[#101b24] font-sans text-[#f7f4ec]">
-    <main class="mx-auto flex min-h-screen w-full max-w-7xl items-center px-6 py-10 sm:px-10 lg:px-16">
-        <section class="grid w-full items-center gap-10 lg:grid-cols-2 lg:gap-16" aria-labelledby="titulo-campana">
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Descubre Medellín de noche con las rutas y planes de Rueda Libre.">
+    <meta name="author" content="Juan Pablo Rodriguez">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./src/output.css">
+
+    <title>Rueda Nocturna | Rueda Libre</title>
+</head>
+
+<body class="dark min-h-screen bg-[#101b24] font-[Montserrat] text-[#f7f4ec] dark:bg-[#101b24]">
+
+    <main class="w-full">
+
+        <!-- =========================
+             PORTADA
+        ========================== -->
+        <section
+            class="mx-auto grid w-full max-w-7xl items-center gap-12 px-6 py-16 sm:px-10 lg:grid-cols-2 lg:gap-16 lg:px-16 lg:py-24"
+            aria-labelledby="titulo-campana">
+
+            <!-- Información -->
             <div class="space-y-8">
-                <a href="../index.html" class="inline-flex items-center gap-3 text-sm font-bold tracking-[0.22em] text-[#c4d0ca] uppercase">
+
+                <a href="../index.html"
+                    class="inline-flex items-center gap-3 text-sm font-bold uppercase tracking-[0.22em] text-[#c4d0ca]">
                     <span class="h-px w-8 bg-[#e4b86b]"></span>
                     Rueda Libre
                 </a>
 
                 <div class="space-y-5">
-                    <p class="inline-flex rounded-full border border-[#e4b86b]/50 bg-[#e4b86b]/10 px-4 py-2 text-xs font-bold tracking-[0.18em] text-[#f0c77e] uppercase">
+
+                    <p class="inline-flex rounded-full border border-[#e4b86b]/50 bg-[#e4b86b]/10 px-4 py-2 text-xs font-bold uppercase tracking-widest text-[#f0c77e]">
                         Nuevo · Jueves a sábado
                     </p>
-                    <h1 id="titulo-campana" class="max-w-2xl text-5xl leading-[1.02] font-black tracking-tight sm:text-6xl lg:text-7xl">
+
+                    <h1 id="titulo-campana"
+                        class="text-5xl font-black leading-tight tracking-tight sm:text-6xl lg:text-7xl">
                         Rueda <span class="text-[#e4b86b]">Nocturna</span>
                     </h1>
+
                     <p class="max-w-xl text-lg leading-8 text-[#c4d0ca] sm:text-xl">
-                        Descubre Medellín en bici cuando se encienden las luces
+                        Descubre Medellín en bicicleta cuando se encienden
+                        las luces de la ciudad.
+                    </p>
+
+                </div>
+
+                <!-- Estadísticas -->
+                <div class="flex max-w-md items-center gap-10 border-y border-[#354650] py-5">
+
+                    <div class="space-y-1">
+                        <p class="text-3xl font-black">3</p>
+                        <p class="text-xs font-bold uppercase tracking-widest text-[#aabbb3]">
+                            Rutas
+                        </p>
+                    </div>
+
+                    <div class="h-14 w-px bg-[#354650]"></div>
+
+                    <div class="space-y-1">
+                        <p class="text-3xl font-black">$45.000</p>
+                        <p class="text-xs font-bold uppercase tracking-widest text-[#aabbb3]">
+                            Desde por persona
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Botón principal -->
+                <div class="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+
+                    <a href="#rutas"
+                        class="inline-flex items-center justify-center rounded-full bg-[#e4b86b] px-8 py-4 text-sm font-extrabold text-[#14232c] transition-colors duration-300 hover:bg-[#f0ca8a] focus:outline-2 focus:outline-offset-4 focus:outline-[#e4b86b]">
+                        Explorar rutas
+                        <span class="ml-3 text-lg" aria-hidden="true">↗</span>
+                    </a>
+
+                    <p class="max-w-xs text-sm leading-6 text-[#aabbb3]">
+                        Una ciudad distinta empieza después del atardecer.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Imagen de portada -->
+            <div class="relative mx-auto w-full max-w-xl">
+
+                <div
+                    class="absolute -right-3 -bottom-3 h-full w-full rounded-[2rem] border border-[#e4b86b]/50 sm:-right-5 sm:-bottom-5">
+                </div>
+
+                <div class="relative overflow-hidden rounded-[2rem] bg-[#24343d]">
+
+                    <img
+                        src="../img/rueda-nocturna.png"
+                        alt="Recorrido nocturno en bicicleta por Medellín"
+                        class="h-[27rem] w-full object-cover sm:h-[35rem]">
+
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#101b24]/80 via-transparent to-transparent"></div>
+
+                    <div class="absolute right-6 bottom-7 left-6 sm:right-8 sm:bottom-9 sm:left-8">
+
+                        <p class="text-xs font-bold uppercase tracking-[0.25em] text-[#e4b86b]">
+                            Medellín se vive sobre ruedas
+                        </p>
+
+                        <p class="mt-2 text-3xl font-black sm:text-4xl">
+                            La ciudad<br>después del sol.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SECCIÓN DE RUTAS
+        ========================== -->
+        <section id="rutas"
+            class="mx-auto w-full max-w-5xl px-6 py-16 sm:px-10 lg:px-16"
+            aria-labelledby="titulo-rutas">
+
+            <!-- Encabezado -->
+            <div class="mb-12 text-center">
+
+                <p class="mb-3 text-xs font-bold uppercase tracking-[0.25em] text-[#e4b86b]">
+                    Explora Medellín
+                </p>
+
+                <h2 id="titulo-rutas"
+                    class="mb-5 text-3xl font-black sm:text-4xl lg:text-5xl">
+                    Nuestras <span class="text-[#e4b86b]">rutas</span>
+                </h2>
+
+                <p class="mx-auto max-w-2xl text-base leading-7 text-[#c4d0ca]">
+                    Elige tu próximo recorrido nocturno y disfruta una
+                    experiencia diferente por la ciudad.
+                    Todas las rutas incluyen bicicleta, casco, luces LED,
+                    chaleco reflectivo y guía.
+                </p>
+
+            </div>
+
+            <!-- Tarjetas de rutas -->
+            <div class="flex flex-col gap-8">
+
+                <!-- RUTA 1 -->
+                <article
+                    class="w-full overflow-hidden rounded-2xl border border-[#354650] bg-[#192832] shadow-lg transition-shadow duration-300 hover:shadow-2xl hover:shadow-[#e4b86b]/10 dark:bg-[#192832]">
+
+                    <img
+                        src="../img/route.jpeg"
+                        alt="Recorrido nocturno por las calles de Medellín"
+                        class="h-56 w-full object-cover sm:h-64">
+
+                    <div class="p-6 sm:p-8">
+
+                        <div class="mb-5 flex items-center justify-between">
+                            <span class="rounded-full border border-green-400/30 bg-green-400/10 px-4 py-2 text-xs font-bold text-green-300">
+                                Nivel fácil
+                            </span>
+
+                            <span class="text-xs font-bold uppercase tracking-widest text-[#aabbb3]">
+                                Ruta 01
+                            </span>
+                        </div>
+
+                        <h3 class="mb-6 text-2xl font-extrabold sm:text-3xl">
+                            Luces del Centro
+                        </h3>
+
+                        <div class="mb-7 grid grid-cols-2 gap-6 border-b border-[#354650] pb-7">
+
+                            <div>
+                                <p class="mb-2 text-xs uppercase tracking-wider text-[#aabbb3]">
+                                    Distancia
+                                </p>
+                                <p class="text-xl font-bold">10 km</p>
+                            </div>
+
+                            <div>
+                                <p class="mb-2 text-xs uppercase tracking-wider text-[#aabbb3]">
+                                    Duración
+                                </p>
+                                <p class="text-xl font-bold">2 horas</p>
+                            </div>
+
+                            <div class="col-span-2">
+                                <p class="mb-2 text-xs uppercase tracking-wider text-[#aabbb3]">
+                                    Punto de encuentro
+                                </p>
+                                <p class="font-semibold">Sede Rueda Libre</p>
+                            </div>
+
+                        </div>
+
+                        <div class="flex flex-col justify-between gap-5 sm:flex-row sm:items-center">
+
+                            <div>
+                                <p class="mb-1 text-sm text-[#aabbb3]">
+                                    Precio por persona
+                                </p>
+                                <p class="text-3xl font-black text-[#e4b86b]">
+                                    $55.000
+                                </p>
+                            </div>
+
+                            <a href="../pages/reservas.html"
+                                class="inline-flex items-center justify-center rounded-full bg-[#e4b86b] px-7 py-3.5 text-sm font-extrabold text-[#14232c] transition-colors duration-300 hover:bg-[#f0ca8a]">
+                                Reservar ruta ↗
+                            </a>
+
+                        </div>
+
+                    </div>
+                </article>
+
+
+                <!-- RUTA 2 -->
+                <article
+                    class="w-full overflow-hidden rounded-2xl border border-[#354650] bg-[#192832] shadow-lg transition-shadow duration-300 hover:shadow-2xl hover:shadow-[#e4b86b]/10 dark:bg-[#192832]">
+
+                    <img
+                        src="../img/bicycle-route.jpg"
+                        alt="Ciclistas recorriendo la ciudad"
+                        class="h-56 w-full object-cover sm:h-64">
+
+                    <div class="p-6 sm:p-8">
+
+                        <div class="mb-5 flex items-center justify-between">
+                            <span class="rounded-full border border-yellow-400/30 bg-yellow-400/10 px-4 py-2 text-xs font-bold text-yellow-300">
+                                Nivel medio
+                            </span>
+
+                            <span class="text-xs font-bold uppercase tracking-widest text-[#aabbb3]">
+                                Ruta 02
+                            </span>
+                        </div>
+
+                        <h3 class="mb-6 text-2xl font-extrabold sm:text-3xl">
+                            Miradores de la Ciudad
+                        </h3>
+
+                        <div class="mb-7 grid grid-cols-2 gap-6 border-b border-[#354650] pb-7">
+
+                            <div>
+                                <p class="mb-2 text-xs uppercase tracking-wider text-[#aabbb3]">
+                                    Distancia
+                                </p>
+                                <p class="text-xl font-bold">16 km</p>
+                            </div>
+
+                            <div>
+                                <p class="mb-2 text-xs uppercase tracking-wider text-[#aabbb3]">
+                                    Duración
+                                </p>
+                                <p class="text-xl font-bold">3 horas</p>
+                            </div>
+
+                            <div class="col-span-2">
+                                <p class="mb-2 text-xs uppercase tracking-wider text-[#aabbb3]">
+                                    Punto de encuentro
+                                </p>
+                                <p class="font-semibold">Sede Rueda Libre</p>
+                            </div>
+
+                        </div>
+
+                        <div class="flex flex-col justify-between gap-5 sm:flex-row sm:items-center">
+
+                            <div>
+                                <p class="mb-1 text-sm text-[#aabbb3]">
+                                    Precio por persona
+                                </p>
+                                <p class="text-3xl font-black text-[#e4b86b]">
+                                    $75.000
+                                </p>
+                            </div>
+
+                            <a href="../pages/reservas.html"
+                                class="inline-flex items-center justify-center rounded-full bg-[#e4b86b] px-7 py-3.5 text-sm font-extrabold text-[#14232c] transition-colors duration-300 hover:bg-[#f0ca8a]">
+                                Reservar ruta ↗
+                            </a>
+
+                        </div>
+
+                    </div>
+                </article>
+
+
+                <!-- RUTA 3 -->
+                <article
+                    class="w-full overflow-hidden rounded-2xl border border-[#354650] bg-[#192832] shadow-lg transition-shadow duration-300 hover:shadow-2xl hover:shadow-[#e4b86b]/10 dark:bg-[#192832]">
+
+                    <img
+                        src="../img/group-bicycle.jpeg"
+                        alt="Bicicletas preparadas para un recorrido exigente"
+                        class="h-56 w-full object-cover sm:h-64">
+
+                    <div class="p-6 sm:p-8">
+
+                        <div class="mb-5 flex items-center justify-between">
+                            <span class="rounded-full border border-red-400/30 bg-red-400/10 px-4 py-2 text-xs font-bold text-red-300">
+                                Nivel difícil
+                            </span>
+
+                            <span class="text-xs font-bold uppercase tracking-widest text-[#aabbb3]">
+                                Ruta 03
+                            </span>
+                        </div>
+
+                        <h3 class="mb-6 text-2xl font-extrabold sm:text-3xl">
+                            Luna en Las Palmas
+                        </h3>
+
+                        <div class="mb-7 grid grid-cols-2 gap-6 border-b border-[#354650] pb-7">
+
+                            <div>
+                                <p class="mb-2 text-xs uppercase tracking-wider text-[#aabbb3]">
+                                    Distancia
+                                </p>
+                                <p class="text-xl font-bold">22 km</p>
+                            </div>
+
+                            <div>
+                                <p class="mb-2 text-xs uppercase tracking-wider text-[#aabbb3]">
+                                    Duración
+                                </p>
+                                <p class="text-xl font-bold">3,5 horas</p>
+                            </div>
+
+                            <div class="col-span-2">
+                                <p class="mb-2 text-xs uppercase tracking-wider text-[#aabbb3]">
+                                    Punto de encuentro
+                                </p>
+                                <p class="font-semibold">Sede Rueda Libre</p>
+                            </div>
+
+                        </div>
+
+                        <div class="flex flex-col justify-between gap-5 sm:flex-row sm:items-center">
+
+                            <div>
+                                <p class="mb-1 text-sm text-[#aabbb3]">
+                                    Precio por persona
+                                </p>
+                                <p class="text-3xl font-black text-[#e4b86b]">
+                                    $95.000
+                                </p>
+                            </div>
+
+                            <a href="../pages/reservas.html"
+                                class="inline-flex items-center justify-center rounded-full bg-[#e4b86b] px-7 py-3.5 text-sm font-extrabold text-[#14232c] transition-colors duration-300 hover:bg-[#f0ca8a]">
+                                Reservar ruta ↗
+                            </a>
+
+                        </div>
+
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SECCIÓN DE PLANES
+        ========================== -->
+        <section id="planes"
+            class="w-full bg-[#14232c] px-6 py-20 text-[#f7f4ec] sm:px-10 lg:px-16 dark:bg-[#14232c] dark:text-[#f7f4ec]"
+            aria-labelledby="titulo-planes">
+
+            <div class="mx-auto max-w-7xl">
+
+                <!-- Encabezado -->
+                <div class="mb-12 text-center sm:mb-14">
+                    <p class="mb-3 text-xs font-bold uppercase tracking-[0.25em] text-[#e4b86b]">
+                        Elige tu experiencia
+                    </p>
+
+                    <h2 id="titulo-planes" class="mb-5 text-3xl font-black sm:text-4xl lg:text-5xl">
+                        Planes <span class="text-[#e4b86b]">Rueda Nocturna</span>
+                    </h2>
+
+                    <p class="mx-auto max-w-2xl text-base leading-7 text-[#c4d0ca]">
+                        Tenemos una experiencia para cada ocasión. Disfruta Medellín de noche
+                        y comparte una aventura sobre ruedas.
                     </p>
                 </div>
 
-                <div class="flex max-w-md gap-10 border-y border-[#354650] py-5">
-                    <div class="space-y-1">
-                        <p class="text-3xl font-black tracking-tight text-[#f7f4ec]">3</p>
-                        <p class="text-xs font-bold tracking-[0.18em] text-[#aabbb3] uppercase">Rutas</p>
-                    </div>
-                    <div class="h-14 w-px bg-[#354650]"></div>
-                    <div class="space-y-1">
-                        <p class="text-3xl font-black tracking-tight text-[#f7f4ec]">$55.000</p>
-                        <p class="text-xs font-bold tracking-[0.18em] text-[#aabbb3] uppercase">Desde</p>
-                    </div>
-                </div>
+                <!-- Tres columnas en escritorio y una en celular -->
+                <div class="grid grid-cols-1 items-stretch gap-7 lg:grid-cols-3">
 
-                <div class="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-                    <a href="../pages/reservas.html" class="inline-flex items-center justify-center rounded-full bg-[#e4b86b] px-8 py-4 text-sm font-extrabold tracking-wide text-[#14232c] hover:bg-[#f0ca8a] focus:outline-2 focus:outline-offset-4 focus:outline-[#e4b86b]">
-                        Inscríbete
-                        <span class="ml-3 text-lg" aria-hidden="true">↗</span>
-                    </a>
-                    <p class="max-w-xs text-sm leading-6 text-[#aabbb3]">Una ciudad distinta empieza después del atardecer.</p>
-                </div>
-            </div>
+                    <!-- PLAN INDIVIDUAL -->
+                    <article class="flex h-full min-w-0 flex-col overflow-hidden rounded-2xl border-2 border-[#354650] bg-[#192832] shadow-lg transition-shadow duration-300 hover:shadow-xl dark:border-[#354650] dark:bg-[#192832]">
+                        <img
+                            src="../img/bicycle-pleglable.jpeg"
+                            alt="Ciclista recorriendo una calle de la ciudad"
+                            class="h-48 w-full shrink-0 object-cover"
+                            loading="lazy">
 
-            <div class="relative mx-auto w-full max-w-xl">
-                <div class="absolute -right-3 -bottom-3 h-full w-full rounded-[2rem] border border-[#e4b86b]/50 sm:-right-5 sm:-bottom-5"></div>
-                <div class="relative overflow-hidden rounded-[2rem] bg-[#24343d]">
-                    <img src="../img/rueda-nocturna.png" alt="Persona recorriendo Medellín de noche en una bicicleta deportiva" class="h-[27rem] w-full object-cover sm:h-[35rem]">
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#101b24]/75 via-transparent to-[#101b24]/5"></div>
-                    <div class="absolute right-6 bottom-7 left-6 sm:right-8 sm:bottom-9 sm:left-8">
-                        <p class="text-xs font-bold tracking-[0.25em] text-[#e4b86b] uppercase">Medellín se vive sobre ruedas</p>
-                        <p class="mt-2 text-3xl font-black tracking-tight sm:text-4xl">La ciudad<br>después del sol.</p>
-                    </div>
+                        <div class="flex flex-1 flex-col p-6">
+                            <!-- Reserva el mismo espacio para que las tarjetas no se desalineen -->
+                            <div class="mb-5 flex min-h-8 items-center">
+                                <span class="invisible inline-flex rounded-full px-4 py-2 text-xs font-extrabold" aria-hidden="true">
+                                    Más elegido
+                                </span>
+                            </div>
+
+                            <div class="mb-6">
+                                <p class="mb-2 text-xs font-bold uppercase tracking-widest text-[#aabbb3]">
+                                    Para una persona
+                                </p>
+                                <h3 class="text-2xl font-extrabold text-[#f7f4ec] dark:text-[#f7f4ec]">
+                                    Individual
+                                </h3>
+                            </div>
+
+                            <div class="mb-7 min-h-28 border-b border-[#354650] pb-6 dark:border-[#354650]">
+                                <p class="mb-2 text-sm text-[#c4d0ca]">Precio por persona</p>
+                                <p class="text-3xl font-black text-[#e4b86b]">$55.000</p>
+                            </div>
+
+                            <div class="mb-8 flex flex-col gap-4">
+                                <p class="text-xs font-bold uppercase tracking-widest text-[#e4b86b]">
+                                    ¿Qué incluye?
+                                </p>
+                                <ul class="flex flex-col gap-3 text-sm leading-6 text-[#d5dfda]">
+                                    <li class="flex items-start gap-3">
+                                        <span class="font-bold text-[#e4b86b]" aria-hidden="true">✓</span>
+                                        <span>Bicicleta y casco</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="font-bold text-[#e4b86b]" aria-hidden="true">✓</span>
+                                        <span>Luces LED y chaleco</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="font-bold text-[#e4b86b]" aria-hidden="true">✓</span>
+                                        <span>Guía certificado</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="font-bold text-[#e4b86b]" aria-hidden="true">✓</span>
+                                        <span>Hidratación</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <a href="../pages/reservas.html"
+                                class="mt-auto inline-flex min-h-12 w-full items-center justify-center rounded-full border-2 border-[#e4b86b] px-6 py-3 text-sm font-bold text-[#e4b86b] transition-colors duration-300 hover:bg-[#e4b86b] hover:text-[#14232c] focus:outline-2 focus:outline-offset-4 focus:outline-[#e4b86b]">
+                                Elegir plan <span class="ml-2" aria-hidden="true">↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- PLAN PAREJA: DESTACADO -->
+                    <article class="relative flex h-full min-w-0 flex-col overflow-hidden rounded-2xl border-2 border-[#e4b86b] bg-[#263943] shadow-xl shadow-[#e4b86b]/10 transition-shadow duration-300 hover:shadow-2xl hover:shadow-[#e4b86b]/20 dark:border-[#e4b86b] dark:bg-[#263943]">
+                        <img
+                            src="../img/bicycle-gravel-aventura.jpeg"
+                            alt="Dos bicicletas preparadas para compartir una aventura"
+                            class="h-48 w-full shrink-0 object-cover"
+                            loading="lazy">
+
+                        <div class="flex flex-1 flex-col p-6">
+                            <div class="mb-5 flex min-h-8 items-center">
+                                <span class="inline-flex items-center gap-2 rounded-full bg-[#e4b86b] px-4 py-2 text-xs font-extrabold uppercase tracking-wider text-[#14232c]">
+                                    <span aria-hidden="true">★</span>
+                                    Más elegido
+                                </span>
+                            </div>
+
+                            <div class="mb-6">
+                                <p class="mb-2 text-xs font-bold uppercase tracking-widest text-[#e4b86b]">
+                                    Para compartir
+                                </p>
+                                <h3 class="text-2xl font-extrabold text-[#f7f4ec] dark:text-[#f7f4ec]">
+                                    Pareja
+                                </h3>
+                            </div>
+
+                            <div class="mb-7 min-h-28 border-b border-[#52636a] pb-6 dark:border-[#52636a]">
+                                <p class="mb-2 text-sm text-[#e0e8e3]">Precio por las dos personas</p>
+                                <p class="text-3xl font-black text-[#e4b86b]">$99.000</p>
+                            </div>
+
+                            <div class="mb-8 flex flex-col gap-4">
+                                <p class="text-xs font-bold uppercase tracking-widest text-[#e4b86b]">
+                                    ¿Qué incluye?
+                                </p>
+                                <ul class="flex flex-col gap-3 text-sm leading-6 text-[#f7f4ec]">
+                                    <li class="flex items-start gap-3">
+                                        <span class="font-bold text-[#e4b86b]" aria-hidden="true">✓</span>
+                                        <span>Todo lo del plan Individual</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="font-bold text-[#e4b86b]" aria-hidden="true">✓</span>
+                                        <span>Foto del recorrido</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="font-bold text-[#e4b86b]" aria-hidden="true">✓</span>
+                                        <span>Snack para dos</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="font-bold text-[#e4b86b]" aria-hidden="true">✓</span>
+                                        <span>Prioridad en la ruta</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <a href="../pages/reservas.html"
+                                class="mt-auto inline-flex min-h-12 w-full items-center justify-center rounded-full bg-[#e4b86b] px-6 py-3 text-sm font-extrabold text-[#14232c] transition-colors duration-300 hover:bg-[#f0ca8a] focus:outline-2 focus:outline-offset-4 focus:outline-[#e4b86b]">
+                                Elegir plan <span class="ml-2" aria-hidden="true">↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- PLAN GRUPO -->
+                    <article class="flex h-full min-w-0 flex-col overflow-hidden rounded-2xl border-2 border-[#354650] bg-[#192832] shadow-lg transition-shadow duration-300 hover:shadow-xl dark:border-[#354650] dark:bg-[#192832]">
+                        <img
+                            src="../img/group-bicycle.jpeg"
+                            alt="Grupo de ciclistas disfrutando un recorrido en bicicleta"
+                            class="h-48 w-full shrink-0 object-cover"
+                            loading="lazy">
+
+                        <div class="flex flex-1 flex-col p-6">
+                            <div class="mb-5 flex min-h-8 items-center">
+                                <span class="invisible inline-flex rounded-full px-4 py-2 text-xs font-extrabold" aria-hidden="true">
+                                    Más elegido
+                                </span>
+                            </div>
+
+                            <div class="mb-6">
+                                <p class="mb-2 text-xs font-bold uppercase tracking-widest text-[#aabbb3]">
+                                    Para compartir en grupo
+                                </p>
+                                <h3 class="text-2xl font-extrabold text-[#f7f4ec] dark:text-[#f7f4ec]">
+                                    Grupo (4 a 8)
+                                </h3>
+                            </div>
+
+                            <div class="mb-7 min-h-28 border-b border-[#354650] pb-6 dark:border-[#354650]">
+                                <p class="mb-2 text-sm text-[#c4d0ca]">Precio por persona</p>
+                                <p class="text-3xl font-black text-[#e4b86b]">$45.000</p>
+                            </div>
+
+                            <div class="mb-8 flex flex-col gap-4">
+                                <p class="text-xs font-bold uppercase tracking-widest text-[#e4b86b]">
+                                    ¿Qué incluye?
+                                </p>
+                                <ul class="flex flex-col gap-3 text-sm leading-6 text-[#d5dfda]">
+                                    <li class="flex items-start gap-3">
+                                        <span class="font-bold text-[#e4b86b]" aria-hidden="true">✓</span>
+                                        <span>Todo lo del plan Individual</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="font-bold text-[#e4b86b]" aria-hidden="true">✓</span>
+                                        <span>Guía exclusivo</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="font-bold text-[#e4b86b]" aria-hidden="true">✓</span>
+                                        <span>Horario a elección</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="font-bold text-[#e4b86b]" aria-hidden="true">✓</span>
+                                        <span>Fotos del grupo</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <a href="../pages/reservas.html"
+                                class="mt-auto inline-flex min-h-12 w-full items-center justify-center rounded-full border-2 border-[#e4b86b] px-6 py-3 text-sm font-bold text-[#e4b86b] transition-colors duration-300 hover:bg-[#e4b86b] hover:text-[#14232c] focus:outline-2 focus:outline-offset-4 focus:outline-[#e4b86b]">
+                                Elegir plan <span class="ml-2" aria-hidden="true">↗</span>
+                            </a>
+                        </div>
+                    </article>
+
                 </div>
             </div>
         </section>
-        
-        <div class="flex flex-row gap-x-8 mx-8">
-         <!-- Botón principal -->
-                <button
-                    type="button"
-                    class="rounded-lg bg-indigo-600 px-6 py-3 font-semibold text-white shadow-md transition hover:bg-indigo-700 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-indigo-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900">
-                    Principal
-                </button>
 
-                <!-- Botón secundario -->
-                <button
-                    type="button"
-                    class="rounded-lg bg-slate-700 px-6 py-3 font-semibold text-white shadow-md transition hover:bg-slate-600 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-slate-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900">
-                    Secundario
-                </button>
 
-                <!-- Botón de contorno -->
-                <button
-                    type="button"
-                    class="rounded-lg border-2 border-indigo-400 px-6 py-3 font-semibold text-indigo-300 transition hover:bg-indigo-500 hover:text-white focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-indigo-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900">
-                    Contorno
-                </button>
-        </div>
+        <!-- =========================
+             PIE DE PÁGINA
+        ========================== -->
+        <footer class="border-t border-[#354650] bg-[#101b24] px-6 py-10 text-center">
+
+            <a href="../index.html"
+                class="text-lg font-extrabold tracking-widest text-[#e4b86b]">
+                RUEDA LIBRE
+            </a>
+
+            <p class="mt-3 text-sm text-[#aabbb3]">
+                Descubre la ciudad, disfruta el recorrido y rueda con seguridad.
+            </p>
+
+            <p class="mt-5 text-xs text-[#71838b]">
+                © 2026 Rueda Libre. Todos los derechos reservados.
+            </p>
+
+        </footer>
+
     </main>
+
 </body>
+
 </html>

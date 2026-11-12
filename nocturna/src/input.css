@@ -1,1 +1,4 @@
 @import "tailwindcss";
+
+/* Activa dark: mediante la clase .dark del elemento raíz. */
+@custom-variant dark (&:where(.dark, .dark *));
