@@ -398,3 +398,31 @@ Reglas del kit
 Publicación
 - Archivo de entrega: nocturna/componentes.html.
 - URL de GitHub Pages: completar después de publicar el commit en el repositorio remoto. No se inventa una URL antes de verificarla.
+
+
+Semana 3 – MiniReto: La noche cabe en tu celular (landing responsive)
+
+Revisión inicial a 360 px
+- El encabezado estaba en una sola fila, con los enlaces de navegación visibles y espacios amplios; podía quedar demasiado ajustado en celular.
+- La cuadrícula de rutas tenía tres columnas fijas (`grid-cols-3`), por lo que las tarjetas quedaban demasiado estrechas en pantallas pequeñas.
+- La sección “Cómo funciona” tenía cuatro columnas fijas (`grid-cols-4`), haciendo que los pasos no tuvieran espacio suficiente en móvil.
+- La llamada a la acción y el pie estaban organizados horizontalmente, lo que podía comprimir el contenido en anchos reducidos.
+- Los paddings horizontales y el título principal necesitaban tamaños progresivos para aprovechar el espacio disponible.
+
+Cambios responsive realizados en `nocturna/index.html`
+- Se aplicó mobile-first: las clases sin prefijo definen el celular y `sm:`, `md:` y `lg:` adaptan el diseño a pantallas mayores.
+- Encabezado: se apila en móvil (`flex-col`) y pasa a una fila desde `md` (`md:flex-row`). Los enlaces “Rutas” y “¿Cómo funciona?” se ocultan en móvil (`hidden`) y aparecen desde `md`; el botón “Inscríbete” permanece visible.
+- Rutas: una columna por defecto, dos desde `sm` (640 px) y tres desde `lg` (1024 px).
+- Pasos: una columna por defecto, dos desde `sm` y cuatro desde `lg`.
+- La portada, la llamada a la acción y el pie se apilan en móvil y adoptan distribución horizontal desde `md` cuando corresponde.
+- Se ajustaron tamaños de texto, gaps y rellenos con clases responsive para mejorar la lectura y el espacio en cada pantalla.
+
+Tabla de pruebas responsive
+Anchos solicitados | Comportamiento configurado en las clases | Resultado de revisión
+360 px | Una columna para rutas y pasos; encabezado apilado; enlaces de secciones ocultos; botón “Inscríbete” visible; contenido con padding móvil | Estructura mobile-first aplicada; pendiente comprobación visual en DevTools
+768 px | Dos columnas para rutas y pasos; encabezado en fila; enlaces de secciones visibles | Breakpoint `sm`/`md` aplicado según el componente; pendiente comprobación visual en DevTools
+1024 px | Tres columnas para rutas y cuatro para pasos; distribución de escritorio en secciones correspondientes | Breakpoint `lg` aplicado; pendiente comprobación visual en DevTools
+1280 px | Tres columnas para rutas y cuatro para pasos; contenedores con ancho máximo y espaciado amplio | Diseño de escritorio configurado; pendiente comprobación visual en DevTools
+
+Nota de validación
+- Se revisaron las clases y la estructura del HTML. La prueba real en modo dispositivo de DevTools a 360, 768, 1024 y 1280 px debe completarse en el navegador; no se registra como ejecutada porque no se realizó desde este entorno.
