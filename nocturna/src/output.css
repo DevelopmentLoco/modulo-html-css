@@ -38,3 +38,27 @@
 .sm\:py-16{padding-block:calc(var(--spacing)*16)}
 .sm\:text-5xl{font-size:var(--text-5xl);line-height:var(--text-5xl--line-height)}
 }
+
+/* Tema de marca Rueda Libre */
+:root {
+  --color-crema:#FAF6EF; --color-azul:#14213D; --color-gris:#5B6470;
+  --color-verde:#1E7A4F; --color-naranja:#F39A2B; --color-amarillo-farol:#FFD166;
+  --font-montserrat:"Montserrat",sans-serif; --font-open-sans:"Open Sans",sans-serif;
+}
+.font-montserrat{font-family:var(--font-montserrat)}
+.font-open-sans{font-family:var(--font-open-sans)}
+\n.bg-amarillo-farol{background-color:#FFD166}\n.bg-amarillo-farol\/10{background-color:color-mix(in srgb, #FFD166 10%, transparent)}\n.bg-azul{background-color:#14213D}\n.bg-crema{background-color:#FAF6EF}\n.bg-gris{background-color:#5B6470}\n.bg-verde{background-color:#1E7A4F}\n.bg-verde\/10{background-color:color-mix(in srgb, #1E7A4F 10%, transparent)}\n.border-amarillo-farol{border-color:#FFD166}\n.border-amarillo-farol\/30{border-color:color-mix(in srgb, #FFD166 30%, transparent)}\n.border-amarillo-farol\/40{border-color:color-mix(in srgb, #FFD166 40%, transparent)}\n.border-amarillo-farol\/50{border-color:color-mix(in srgb, #FFD166 50%, transparent)}\n.border-gris{border-color:#5B6470}\n.border-verde\/30{border-color:color-mix(in srgb, #1E7A4F 30%, transparent)}\n@media (prefers-color-scheme: dark){.dark\:bg-azul{background-color:#14213D}}\n@media (prefers-color-scheme: dark){.dark\:bg-verde{background-color:#1E7A4F}}\n@media (prefers-color-scheme: dark){.dark\:text-amarillo-farol{color:#FFD166}}\n@media (prefers-color-scheme: dark){.dark\:text-crema{color:#FAF6EF}}\n.focus\:border-amarillo-farol:focus{border-color:#FFD166}\n.hover\:bg-amarillo-farol:hover{background-color:#FFD166}\n.hover\:bg-gris:hover{background-color:#5B6470}\n.hover\:bg-naranja:hover{background-color:#F39A2B}\n.hover\:border-amarillo-farol\/70:hover{border-color:color-mix(in srgb, #FFD166 70%, transparent)}\n.hover\:text-azul:hover{color:#14213D}\n.hover\:text-verde:hover{color:#1E7A4F}\n.text-azul{color:#14213D}\n.text-gris{color:#5B6470}\n.text-verde{color:#1E7A4F}\n@layer base{body{font-family:var(--font-open-sans)}h1,h2,h3,h4,h5,h6{font-family:var(--font-montserrat)}}\n
+.border-l-amarillo-farol{border-left-color:var(--color-amarillo-farol)}
+.border-l-verde{border-left-color:var(--color-verde)}
+.from-azul\/80{--tw-gradient-from:color-mix(in srgb,var(--color-azul) 80%,transparent);--tw-gradient-to:rgb(20 33 61 / 0%);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}
+
+.placeholder\:text-gris::placeholder{color:var(--color-gris)}
+.dark\:placeholder\:text-crema::placeholder{color:var(--color-crema)}
+.shadow-amarillo-farol\/10{--tw-shadow-color:color-mix(in srgb,var(--color-amarillo-farol) 10%,transparent)}
+.hover\\:shadow-amarillo-farol\\/20:hover{--tw-shadow-color:color-mix(in srgb,var(--color-amarillo-farol) 20%,transparent)}
+
+@media (prefers-color-scheme: dark){
+ .dark\\:bg-amarillo-farol{background-color:var(--color-amarillo-farol)}
+ .dark\\:border-gris{border-color:var(--color-gris)}
+ .dark\\:border-amarillo-farol{border-color:var(--color-amarillo-farol)}
+}

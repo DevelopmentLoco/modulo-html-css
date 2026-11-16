@@ -1,4 +1,22 @@
 @import "tailwindcss";
 
-/* Activa dark: mediante la clase .dark del elemento raíz. */
-@custom-variant dark (&:where(.dark, .dark *));
+@theme {
+    --color-crema: #FAF6EF;
+    --color-azul: #14213D;
+    --color-gris: #5B6470;
+    --color-verde: #1E7A4F;
+    --color-naranja: #F39A2B;
+    --color-amarillo-farol: #FFD166;
+    --font-montserrat: "Montserrat", sans-serif;
+    --font-open-sans: "Open Sans", sans-serif;
+}
+
+@layer base {
+    body {
+        @apply font-open-sans;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-montserrat;
+    }
+}
