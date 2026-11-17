@@ -460,3 +460,22 @@ Mide el tamaño real del CSS
 CSS Tailwind minificado
 26.768 bytes
 Archivo: nocturna/src/output.css
+
+Semana 3 – Contrarreloj 1: inscripción a Rueda Nocturna
+
+Implementación en `nocturna/index.html`
+- Se sustituyó la llamada a la acción de la sección `#inscripcion` por un formulario de inscripción.
+- Se organizaron los campos en tres conjuntos semánticos con `fieldset` y `legend`: datos personales, detalles del recorrido, y bicicleta y condiciones.
+- Se añadieron los datos solicitados: nombre completo, correo, celular, ruta, día de salida, número de acompañantes, nivel de experiencia, bicicleta propia y aceptación de condiciones.
+- Cada control tiene una etiqueta asociada mediante `label` y `for` / `id`.
+- Se aplicó validación nativa con `required`; nombre con `minlength="3"`; celular con `pattern="3[0-9]{9}"` y `title`; acompañantes con `min="0"` y `max="3"`.
+- Las rutas corresponden a las tres tarjetas ya presentes en la landing: Luces del Centro, Miradores de la Ciudad y Luna en Las Palmas. Los días son jueves, viernes y sábado; los niveles son principiante, intermedio y avanzado.
+- Se aplicó una cuadrícula de una columna por defecto y dos columnas desde `md`, además de estilos `dark:` y estados `focus:` en los controles.
+- Se regeneró `nocturna/src/output.css` con Tailwind CLI.
+
+Verificación y pendientes
+- Se comprobó la estructura del formulario en el HTML y se ejecutó Tailwind CLI correctamente.
+- La comprobación automatizada en Chromium no pudo completarse en este entorno; por tanto, no se registra como realizada la prueba del formulario vacío, con datos inválidos y completo.
+- Queda pendiente recorrer el formulario únicamente con el teclado y comprobar visualmente los modos claro/oscuro y los tamaños móvil/escritorio en el navegador.
+- El formulario usa `method="post"` y `action="#"`; el proyecto no proporciona un destino de recepción de inscripciones. No se añadió un servicio de envío que no estuviera especificado.
+- Tiempo real: pendiente de registrar con el cronómetro durante la ejecución local. No se inventa una duración.
