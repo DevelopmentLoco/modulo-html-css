@@ -498,3 +498,17 @@ Verificación
 
 
 
+
+Semana 3 – Contrarreloj 3: planes Rueda Nocturna
+
+Implementación en `nocturna/index.html`
+- Se agregó la sección “Planes Rueda Nocturna” con los planes Individual, Pareja y Grupo (4 a 8), sus precios y los beneficios indicados en el requerimiento.
+- Se organizó la sección con una cuadrícula de una columna por defecto y tres columnas desde `lg`, mediante `grid`, `grid-cols-1` y `lg:grid-cols-3`.
+- Las tres tarjetas utilizan la misma estructura de distribución con `flex`, `flex-col`, `justify-between`, `h-full` y `p-6`; los botones quedan al final de cada tarjeta.
+- Las listas de beneficios se organizaron en columna con `flex`, `flex-col` y `gap-3`.
+- El plan Pareja se destacó con borde de mayor grosor, fondo diferente y la etiqueta “Más elegido”, posicionada dentro de la tarjeta.
+- Se conservaron los colores de marca y se añadieron variantes `dark:` para las tarjetas, el texto y el plan destacado.
+- Los botones de los tres planes enlazan con la sección de inscripción.
+
+Compilación
+- Se regeneró `nocturna/src/output.css` con Tailwind CLI en modo minificado.
