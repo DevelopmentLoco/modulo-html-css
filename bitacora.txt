@@ -426,3 +426,37 @@ Anchos solicitados | Comportamiento configurado en las clases | Resultado de rev
 
 Nota de validación
 - Se revisaron las clases y la estructura del HTML. La prueba real en modo dispositivo de DevTools a 360, 768, 1024 y 1280 px debe completarse en el navegador; no se registra como ejecutada porque no se realizó desde este entorno.
+
+
+Semana 3 – Código legible y veredicto: Bootstrap vs Tailwind
+
+Refactorización de `nocturna/index.html`
+- Se identificaron las listas de clases repetidas antes de refactorizar la landing.
+- La lista `mb-2 text-sm text-gris dark:text-crema` aparecía 9 veces.
+- La lista `text-sm leading-6 text-gris dark:text-crema` aparecía 5 veces.
+- Las listas `rounded-2xl border border-gris dark:border-gris bg-white dark:bg-azul p-6` y `mb-4 text-3xl font-black text-verde dark:text-amarillo-farol` aparecían 4 veces cada una.
+- Las listas `flex h-full min-w-0 flex-col overflow-hidden rounded-2xl border-2 border-gris dark:border-gris bg-white dark:bg-azul shadow-lg transition-shadow duration-200 hover:shadow-xl`, `inline-flex items-center rounded-full bg-verde dark:bg-verde px-4 py-2 text-xs font-extrabold uppercase tracking-wider text-white dark:text-crema` y `mt-auto inline-flex min-h-12 items-center justify-center rounded-full bg-amarillo-farol dark:bg-amarillo-farol px-6 py-3 text-sm font-extrabold text-azul transition-colors duration-200 hover:bg-naranja focus:outline-2 focus:outline-offset-4 focus:outline-amarillo-farol` aparecían 3 veces cada una.
+- Los seis enlaces de llamada a la acción comparten ahora la clase `.btn-nocturna`, definida en `@layer components` mediante `@apply`. Se conservaron como utilidades las diferencias de ancho, margen y padding de cada botón.
+- Las cards y los bloques de pasos mantienen su marcado y sus clases de kit; no se crearon clases propias para esas piezas.
+- Se ordenaron las utilidades del HTML por grupos: layout, espaciado, tipografía, color/decoración y estados.
+- Se añadió `@custom-variant dark (&:where(.dark, .dark *));` para que las variantes `dark:` respondan a la clase `.dark` usada por la landing.
+
+Comparativa basada en las dos versiones del proyecto
+
+| Criterio | Bootstrap (versión del sitio) | Tailwind (landing Rueda Nocturna) |
+|---|---|---|
+| Curva de aprendizaje | En `index.html` y `pages/catalogo-bootstrap.html` se utilizaron componentes y clases predefinidas como `card`, `row`, `col-*`, `btn` y `nav-link`. Esto permite maquetar usando patrones preparados. | En `nocturna/index.html` se construyeron los elementos combinando utilidades de layout, espaciado, tipografía, color y estados. Requiere conocer las utilidades CSS que se aplican. |
+| Personalización | La versión Bootstrap combina sus componentes con `css/styles.css` para los estilos propios del sitio. | La landing define los colores y las familias tipográficas de marca en `@theme`; también utiliza variantes responsive y dark directamente en el marcado. |
+| Tamaño final | Pendiente de medir en DevTools > Network el tamaño transferido de `bootstrap.min.css` y `bootstrap.bundle.min.js` en la versión Bootstrap. No se registra una cifra porque esa medición de navegador no se realizó. | El `nocturna/src/output.css` que venía en el proyecto ocupa 28.983 bytes antes de ejecutar la nueva compilación minificada. No es el tamaño final de esta refactorización. La compilación con `--minify` está pendiente porque `npm ci` no terminó en este entorno. |
+| Casos de uso | En la versión existente se usó para páginas con navegación, tarjetas, rejillas y componentes Bootstrap. | En Rueda Nocturna se usó para una landing con tema de marca, diseño responsive y variantes de modo oscuro. |
+
+Recomendación para Rueda Libre
+- Para la próxima versión de la landing y las páginas que necesiten una identidad visual muy personalizada, la recomendación provisional es Tailwind CSS con CLI. En la experiencia de este proyecto, `@theme` centraliza los colores y tipografías, y las utilidades responsive y `dark:` permiten ajustar la interfaz desde el marcado.
+
+
+Mide el tamaño real del CSS
+27047 src/output.css
+
+CSS Tailwind minificado
+26.768 bytes
+Archivo: nocturna/src/output.css

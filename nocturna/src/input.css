@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
     --color-crema: #FAF6EF;
     --color-azul: #14213D;
@@ -18,5 +20,12 @@
 
     h1, h2, h3, h4, h5, h6 {
         @apply font-montserrat;
+    }
+}
+
+
+@layer components {
+    .btn-nocturna {
+        @apply inline-flex min-h-12 items-center justify-center rounded-full bg-amarillo-farol text-sm font-extrabold text-azul transition-colors duration-200 hover:bg-naranja focus:outline-2 focus:outline-offset-4 focus:outline-amarillo-farol;
     }
 }
