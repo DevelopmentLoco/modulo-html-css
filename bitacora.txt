@@ -479,3 +479,32 @@ Verificación y pendientes
 - Queda pendiente recorrer el formulario únicamente con el teclado y comprobar visualmente los modos claro/oscuro y los tamaños móvil/escritorio en el navegador.
 - El formulario usa `method="post"` y `action="#"`; el proyecto no proporciona un destino de recepción de inscripciones. No se añadió un servicio de envío que no estuviera especificado.
 - Tiempo real: pendiente de registrar con el cronómetro durante la ejecución local. No se inventa una duración.
+
+
+Semana 3 - Contrarreloj 2: un solo ecosistema
+
+Integración realizada
+- Agregué el enlace "Rueda Nocturna" a la navbar de index.html, reservas.html, tarifas.html y catalogo-bootstrap.html.
+- Agregué la cuarta diapositiva "Rueda Nocturna" al carrusel de index.html, con enlace a nocturna/index.html.
+- En nocturna/index.html, el logo de Rueda Libre enlaza al inicio del sitio.
+- Agregué el botón "Reserva tu bici" con destino a ../pages/reservas.html.
+- Igualé el dato de contacto del pie de la landing con el sitio: hola@ruedalibre.example.
+- Conservé los valores de color y las fuentes ya definidos en css/styles.css y nocturna/src/input.css.
+- Añadí --bs-warning (#FFD166) y --bs-warning-rgb (255, 209, 102) para que el amarillo farol de @theme también tenga su variable Bootstrap.
+
+Rutas utilizadas
+- Desde index.html: ./nocturna/index.html
+- Desde pages/reservas.html, pages/tarifas.html y pages/catalogo-bootstrap.html: ../nocturna/index.html
+- Desde nocturna/index.html al inicio: ../index.html
+- Desde nocturna/index.html a reservas: ../pages/reservas.html
+
+Verificación
+- Se revisaron las rutas relativas agregadas y los destinos existen dentro del repositorio.
+- La comprobación en navegador y la verificación publicada en GitHub Pages quedan pendientes.
+
+Tiempo real
+- Pendiente de registrar con el cronómetro durante la ejecución en el equipo. No se registra una duración estimada.
+
+Publicación
+- Commit y push: pendientes de ejecutar en el equipo con la sesión de GitHub autenticada.
+- URL de GitHub Pages: pendiente de verificar.

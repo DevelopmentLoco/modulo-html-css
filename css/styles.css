@@ -9,6 +9,8 @@
     --bs-primary-rgb: 30, 122, 79;
     --bs-success: #1E7A4F;
     --bs-success-rgb: 30, 122, 79;
+    --bs-warning: #FFD166;
+    --bs-warning-rgb: 255, 209, 102;
     --bs-link-color: #1E7A4F;
     --bs-link-hover-color: #145638;
     --bs-body-font-family: 'Open Sans', Arial, Helvetica, sans-serif;

@@ -14,8 +14,8 @@
 <body class="min-h-screen font-open-sans text-azul bg-crema dark:bg-azul dark:text-crema">
     <header class="border-b border-gris bg-crema dark:border-gris dark:bg-azul">
         <div class="flex max-w-7xl flex-col items-center md:flex-row md:justify-between mx-auto gap-5 px-4 py-5 sm:px-10 md:gap-8 lg:px-16 lg:py-6">
-            <a href="../index.html" class="inline-flex items-center gap-3 text-sm font-extrabold uppercase tracking-[0.18em] text-gris dark:text-crema hover:text-verde dark:text-amarillo-farol focus:outline-2 focus:outline-offset-4 focus:outline-amarillo-farol">
-                <span class="h-px w-8 bg-amarillo-farol" aria-hidden="true"></span> Rueda Nocturna
+            <a href="../index.html" aria-label="Rueda Libre, volver al inicio del sitio" class="inline-flex items-center focus:outline-2 focus:outline-offset-4 focus:outline-amarillo-farol">
+                <img src="../img/logo.png" alt="Logo de Rueda Libre" class="h-auto w-28">
             </a>
             <nav aria-label="Navegación principal" class="flex w-full flex-col items-center md:w-auto md:flex-row gap-4 md:gap-8 text-sm font-semibold text-gris dark:text-crema">
                 <a href="#rutas" class="hidden md:inline hover:text-verde dark:text-amarillo-farol focus:outline-2 focus:outline-offset-4 focus:outline-amarillo-farol">Rutas</a>
@@ -38,7 +38,10 @@
                     <div class="h-14 w-px bg-gris"></div>
                     <div class="space-y-1"><p class="text-3xl font-black">$55.000</p><p class="text-xs font-bold uppercase tracking-widest text-gris dark:text-crema">Desde</p></div>
                 </div>
-                <a href="#rutas" class="btn-nocturna px-7 py-3">Explorar rutas</a>
+                <div class="flex flex-wrap gap-3">
+                    <a href="#rutas" class="btn-nocturna px-7 py-3">Explorar rutas</a>
+                    <a href="../pages/reservas.html" class="btn-nocturna px-7 py-3">Reserva tu bici</a>
+                </div>
             </div>
             <div class="relative w-full max-w-xl mx-auto">
                 <div class="absolute -right-3 -bottom-3 h-full w-full border sm:-right-5 sm:-bottom-5 rounded-[2rem] border-amarillo-farol/50"></div>
@@ -199,7 +202,7 @@
 
     <footer class="border-t border-gris bg-crema dark:border-gris dark:bg-azul">
         <div class="flex max-w-7xl flex-col md:flex-row md:justify-between mx-auto gap-10 px-4 py-10 sm:px-8 md:gap-12 lg:px-16">
-            <div><a href="../index.html" class="text-lg font-extrabold tracking-widest text-verde dark:text-amarillo-farol">RUEDA LIBRE</a><p class="max-w-xs mt-3 text-sm leading-6 text-gris dark:text-crema">Descubre la ciudad, disfruta el recorrido y rueda con seguridad.</p></div>
+            <div><a href="../index.html" class="text-lg font-extrabold tracking-widest text-verde dark:text-amarillo-farol">RUEDA LIBRE</a><p class="max-w-xs mt-3 text-sm leading-6 text-gris dark:text-crema">Descubre la ciudad, disfruta el recorrido y rueda con seguridad.</p><p class="mt-3 text-sm text-gris dark:text-crema">Contacto: <a class="underline" href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a></p></div>
             <div><h2 class="mb-3 text-sm font-extrabold uppercase tracking-wider">Navegación</h2><nav aria-label="Navegación del pie" class="flex flex-col gap-2 text-sm text-gris dark:text-crema"><a href="#rutas" class="hover:text-verde dark:text-amarillo-farol">Rutas</a><a href="#como-funciona" class="hover:text-verde dark:text-amarillo-farol">¿Cómo funciona?</a><a href="#inscripcion" class="hover:text-verde dark:text-amarillo-farol">Inscríbete</a></nav></div>
             <div><h2 class="mb-3 text-sm font-extrabold uppercase tracking-wider">Rueda Nocturna</h2><p class="text-sm leading-6 text-gris dark:text-crema">Jueves a sábado<br>Medellín, Colombia</p><p class="mt-5 text-xs text-gris dark:text-crema">© 2026 Rueda Libre. Todos los derechos reservados.</p></div>
         </div>
