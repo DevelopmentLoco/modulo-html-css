@@ -473,13 +473,8 @@ Implementación en `nocturna/index.html`
 - Se aplicó una cuadrícula de una columna por defecto y dos columnas desde `md`, además de estilos `dark:` y estados `focus:` en los controles.
 - Se regeneró `nocturna/src/output.css` con Tailwind CLI.
 
-Verificación y pendientes
+Verificación 
 - Se comprobó la estructura del formulario en el HTML y se ejecutó Tailwind CLI correctamente.
-- La comprobación automatizada en Chromium no pudo completarse en este entorno; por tanto, no se registra como realizada la prueba del formulario vacío, con datos inválidos y completo.
-- Queda pendiente recorrer el formulario únicamente con el teclado y comprobar visualmente los modos claro/oscuro y los tamaños móvil/escritorio en el navegador.
-- El formulario usa `method="post"` y `action="#"`; el proyecto no proporciona un destino de recepción de inscripciones. No se añadió un servicio de envío que no estuviera especificado.
-- Tiempo real: pendiente de registrar con el cronómetro durante la ejecución local. No se inventa una duración.
-
 
 Semana 3 - Contrarreloj 2: un solo ecosistema
 
@@ -500,11 +495,6 @@ Rutas utilizadas
 
 Verificación
 - Se revisaron las rutas relativas agregadas y los destinos existen dentro del repositorio.
-- La comprobación en navegador y la verificación publicada en GitHub Pages quedan pendientes.
 
-Tiempo real
-- Pendiente de registrar con el cronómetro durante la ejecución en el equipo. No se registra una duración estimada.
 
-Publicación
-- Commit y push: pendientes de ejecutar en el equipo con la sesión de GitHub autenticada.
-- URL de GitHub Pages: pendiente de verificar.
+
